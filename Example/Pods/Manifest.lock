@@ -1,0 +1,56 @@
+PODS:
+  - JXCategoryViewExt/Core (1.0.0)
+  - JXCategoryViewExt/Dot (1.0.0):
+    - JXCategoryViewExt/Title
+  - JXCategoryViewExt/Image (1.0.0):
+    - JXCategoryViewExt/Core
+  - JXCategoryViewExt/Indicator (1.0.0):
+    - JXCategoryViewExt/Indicator/Ball (= 1.0.0)
+    - JXCategoryViewExt/Indicator/DotLine (= 1.0.0)
+    - JXCategoryViewExt/Indicator/Image (= 1.0.0)
+    - JXCategoryViewExt/Indicator/Line (= 1.0.0)
+    - JXCategoryViewExt/Indicator/RainbowLine (= 1.0.0)
+    - JXCategoryViewExt/Indicator/Triangle (= 1.0.0)
+  - JXCategoryViewExt/Indicator/Ball (1.0.0):
+    - JXCategoryViewExt/Core
+  - JXCategoryViewExt/Indicator/DotLine (1.0.0):
+    - JXCategoryViewExt/Core
+  - JXCategoryViewExt/Indicator/Image (1.0.0):
+    - JXCategoryViewExt/Core
+  - JXCategoryViewExt/Indicator/Line (1.0.0):
+    - JXCategoryViewExt/Core
+  - JXCategoryViewExt/Indicator/RainbowLine (1.0.0):
+    - JXCategoryViewExt/Indicator/Line
+  - JXCategoryViewExt/Indicator/Triangle (1.0.0):
+    - JXCategoryViewExt/Core
+  - JXCategoryViewExt/Number (1.0.0):
+    - JXCategoryViewExt/Title
+  - JXCategoryViewExt/Title (1.0.0):
+    - JXCategoryViewExt/Core
+  - JXCategoryViewExt/TitleAttribute (1.0.0):
+    - JXCategoryViewExt/Title
+  - JXCategoryViewExt/TitleImage (1.0.0):
+    - JXCategoryViewExt/Title
+  - JXCategoryViewExt/VerticalZoomTitle (1.0.0):
+    - JXCategoryViewExt/Title
+
+DEPENDENCIES:
+  - JXCategoryViewExt/Dot (from `../../JXCategoryViewExt`)
+  - JXCategoryViewExt/Image (from `../../JXCategoryViewExt`)
+  - JXCategoryViewExt/Indicator (from `../../JXCategoryViewExt`)
+  - JXCategoryViewExt/Number (from `../../JXCategoryViewExt`)
+  - JXCategoryViewExt/Title (from `../../JXCategoryViewExt`)
+  - JXCategoryViewExt/TitleAttribute (from `../../JXCategoryViewExt`)
+  - JXCategoryViewExt/TitleImage (from `../../JXCategoryViewExt`)
+  - JXCategoryViewExt/VerticalZoomTitle (from `../../JXCategoryViewExt`)
+
+EXTERNAL SOURCES:
+  JXCategoryViewExt:
+    :path: "../../JXCategoryViewExt"
+
+SPEC CHECKSUMS:
+  JXCategoryViewExt: fd8498be4ce161e27b6ab1e46f57f511c269d6be
+
+PODFILE CHECKSUM: db1b3f83e69f51a133c9949b07dc6a47ec46968e
+
+COCOAPODS: 1.10.0

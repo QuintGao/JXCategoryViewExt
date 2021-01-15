@@ -1,0 +1,15 @@
+platform :ios, '9.0'
+
+target 'Example' do
+  use_frameworks!
+
+  pod 'JXCategoryViewExt/Title', :path => '../../JXCategoryViewExt'
+  pod 'JXCategoryViewExt/VerticalZoomTitle', :path => '../../JXCategoryViewExt'
+  pod 'JXCategoryViewExt/Dot', :path => '../../JXCategoryViewExt'
+  pod 'JXCategoryViewExt/Image', :path => '../../JXCategoryViewExt'
+  pod 'JXCategoryViewExt/TitleImage', :path => '../../JXCategoryViewExt'
+  pod 'JXCategoryViewExt/TitleAttribute', :path => '../../JXCategoryViewExt'
+  pod 'JXCategoryViewExt/Number', :path => '../../JXCategoryViewExt'
+  pod 'JXCategoryViewExt/Indicator', :path => '../../JXCategoryViewExt'
+
+end
