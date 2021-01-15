@@ -1,6 +1,6 @@
 # JXCategoryViewExt
 
-该库是对JXCategoryView的扩展及优化，目前的JXCategoryView版本1.5.8，JXCategoryViewExt版本1.0.0
+该库是对[JXCategoryView](https://github.com/pujiaxin33/JXCategoryView/)的扩展及优化，目前的JXCategoryView版本1.5.8，JXCategoryViewExt版本1.0.0
 
 ## 优化及bug修改
 
