@@ -1,5 +1,12 @@
 # JXCategoryViewExt
 
+<p align="center">
+<a href="https://github.com/QuintGao/JXCategoryViewExt"><img src="https://img.shields.io/badge/platform-iOS-red.svg"></a>
+<a href="" ><img src="https://img.shields.io/badge/license-MIT-green.svg?style=flat"></a>
+<a href="https://cocoapods.org/pods/JXCategoryViewExt"><img src="http://img.shields.io/cocoapods/v/JXCategoryViewExt.svg?style=flat"></a>
+<a href=""><img src="https://img.shields.io/badge/support-ios%208%2B-orange.svg"></a>
+</p>
+
 该库是对[JXCategoryView](https://github.com/pujiaxin33/JXCategoryView/)的扩展及优化，目前的JXCategoryView版本1.5.8，JXCategoryViewExt版本1.0.0
 
 ## 优化及bug修改
