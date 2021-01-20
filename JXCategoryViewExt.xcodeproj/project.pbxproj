@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6097426525B6742A004E3744 /* JXCategoryDotZoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6097425F25B6742A004E3744 /* JXCategoryDotZoomView.m */; };
+		6097426625B6742A004E3744 /* JXCategoryDotZoomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6097426025B6742A004E3744 /* JXCategoryDotZoomCell.m */; };
+		6097426725B6742A004E3744 /* JXCategoryDotZoomCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6097426125B6742A004E3744 /* JXCategoryDotZoomCellModel.m */; };
+		6097426825B6742A004E3744 /* JXCategoryDotZoomView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6097426225B6742A004E3744 /* JXCategoryDotZoomView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6097426925B6742A004E3744 /* JXCategoryDotZoomCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6097426325B6742A004E3744 /* JXCategoryDotZoomCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6097426A25B6742A004E3744 /* JXCategoryDotZoomCellModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6097426425B6742A004E3744 /* JXCategoryDotZoomCellModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60A8390425B03DF400F4B1BD /* JXCategoryView.h in Headers */ = {isa = PBXBuildFile; fileRef = 60A8390225B03DF400F4B1BD /* JXCategoryView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60A83A7F25B137DF00F4B1BD /* JXCategoryTitleVerticalZoomCellModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 60A83A1525B137DE00F4B1BD /* JXCategoryTitleVerticalZoomCellModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60A83A8025B137DF00F4B1BD /* JXCategoryTitleVerticalZoomCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 60A83A1625B137DE00F4B1BD /* JXCategoryTitleVerticalZoomCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -111,6 +117,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6097425F25B6742A004E3744 /* JXCategoryDotZoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXCategoryDotZoomView.m; sourceTree = "<group>"; };
+		6097426025B6742A004E3744 /* JXCategoryDotZoomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXCategoryDotZoomCell.m; sourceTree = "<group>"; };
+		6097426125B6742A004E3744 /* JXCategoryDotZoomCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXCategoryDotZoomCellModel.m; sourceTree = "<group>"; };
+		6097426225B6742A004E3744 /* JXCategoryDotZoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXCategoryDotZoomView.h; sourceTree = "<group>"; };
+		6097426325B6742A004E3744 /* JXCategoryDotZoomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXCategoryDotZoomCell.h; sourceTree = "<group>"; };
+		6097426425B6742A004E3744 /* JXCategoryDotZoomCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXCategoryDotZoomCellModel.h; sourceTree = "<group>"; };
 		60A838ED25B03DD300F4B1BD /* libJXCategoryViewExt static.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libJXCategoryViewExt static.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A8390025B03DF400F4B1BD /* JXCategoryViewExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JXCategoryViewExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A8390225B03DF400F4B1BD /* JXCategoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXCategoryView.h; sourceTree = "<group>"; };
@@ -223,6 +235,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6097425E25B6742A004E3744 /* DotZoom */ = {
+			isa = PBXGroup;
+			children = (
+				6097426225B6742A004E3744 /* JXCategoryDotZoomView.h */,
+				6097425F25B6742A004E3744 /* JXCategoryDotZoomView.m */,
+				6097426425B6742A004E3744 /* JXCategoryDotZoomCellModel.h */,
+				6097426125B6742A004E3744 /* JXCategoryDotZoomCellModel.m */,
+				6097426325B6742A004E3744 /* JXCategoryDotZoomCell.h */,
+				6097426025B6742A004E3744 /* JXCategoryDotZoomCell.m */,
+			);
+			path = DotZoom;
+			sourceTree = "<group>";
+		};
 		60A838E425B03DD300F4B1BD = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +283,7 @@
 				60A83A3225B137DE00F4B1BD /* TitleImage */,
 				60A83A3925B137DF00F4B1BD /* TitleAttribute */,
 				60A83A2B25B137DE00F4B1BD /* Dot */,
+				6097425E25B6742A004E3744 /* DotZoom */,
 				60A83A4725B137DF00F4B1BD /* Number */,
 				60A83A1425B137DE00F4B1BD /* VerticalZoomTitle */,
 				60A83A1B25B137DE00F4B1BD /* Indicator */,
@@ -555,6 +581,9 @@
 				60A83A8C25B137DF00F4B1BD /* JXCategoryIndicatorBallView.h in Headers */,
 				60A83AA725B137DF00F4B1BD /* JXCategoryNumberCellModel.h in Headers */,
 				60A83AC225B137DF00F4B1BD /* JXCategoryViewAnimator.h in Headers */,
+				6097426A25B6742A004E3744 /* JXCategoryDotZoomCellModel.h in Headers */,
+				6097426925B6742A004E3744 /* JXCategoryDotZoomCell.h in Headers */,
+				6097426825B6742A004E3744 /* JXCategoryDotZoomView.h in Headers */,
 				60A83A9825B137DF00F4B1BD /* JXCategoryTitleImageView.h in Headers */,
 				60A83AB525B137DF00F4B1BD /* JXCategoryTitleCellModel.h in Headers */,
 				60A8390425B03DF400F4B1BD /* JXCategoryView.h in Headers */,
@@ -659,16 +688,19 @@
 				60A83AC125B137DF00F4B1BD /* JXCategoryListContainerView.m in Sources */,
 				60A83AA925B137DF00F4B1BD /* JXCategoryNumberCell.m in Sources */,
 				60A83AB325B137DF00F4B1BD /* JXCategoryIndicatorCell.m in Sources */,
+				6097426625B6742A004E3744 /* JXCategoryDotZoomCell.m in Sources */,
 				60A83ACC25B137DF00F4B1BD /* JXCategoryViewAnimator.m in Sources */,
 				60A83ABB25B137DF00F4B1BD /* JXCategoryIndicatorLineView.m in Sources */,
 				60A83ACA25B137DF00F4B1BD /* JXCategoryCollectionView.m in Sources */,
 				60A83A8925B137DF00F4B1BD /* JXCategoryIndicatorImageView.m in Sources */,
 				60A83A9425B137DF00F4B1BD /* JXCategoryDotCellModel.m in Sources */,
 				60A83AA025B137DF00F4B1BD /* JXCategoryTitleAttributeCell.m in Sources */,
+				6097426725B6742A004E3744 /* JXCategoryDotZoomCellModel.m in Sources */,
 				60A83AB925B137DF00F4B1BD /* JXCategoryTitleCell.m in Sources */,
 				60A83A8B25B137DF00F4B1BD /* JXCategoryIndicatorBallView.m in Sources */,
 				60A83ACB25B137DF00F4B1BD /* JXCategoryIndicatorParamsModel.m in Sources */,
 				60A83ABD25B137DF00F4B1BD /* JXCategoryIndicatorComponentView.m in Sources */,
+				6097426525B6742A004E3744 /* JXCategoryDotZoomView.m in Sources */,
 				60A83AA825B137DF00F4B1BD /* JXCategoryNumberView.m in Sources */,
 				60A83AAA25B137DF00F4B1BD /* JXCategoryNumberCellModel.m in Sources */,
 				60A83A8725B137DF00F4B1BD /* JXCategoryIndicatorTriangleView.m in Sources */,

@@ -43,6 +43,10 @@ FOUNDATION_EXPORT const unsigned char JXCategoryViewExtVersionString[];
 #import <JXCategoryViewExt/JXCategoryDotView.h>
 #endif
 
+#if __has_include(<JXCategoryViewExt/JXCategoryDotZoomView.h>)
+#import <JXCategoryViewExt/JXCategoryDotZoomView.h>
+#endif
+
 #if __has_include(<JXCategoryViewExt/JXCategoryNumberView.h>)
 #import <JXCategoryViewExt/JXCategoryNumberView.h>
 #endif

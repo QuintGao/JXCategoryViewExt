@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) JXCategoryTitleView *titleView;
 
+@property (nonatomic, strong) JXCategoryDotZoomView   *dotView;
+
 @property (nonatomic, strong) JXCategoryListContainerView *containerView;
 
 @end
@@ -24,11 +26,12 @@
     
     self.view.backgroundColor = UIColor.whiteColor;
     
-    
     self.titleView.frame = CGRectMake(0, 100, self.view.bounds.size.width, 40);
-    self.containerView.frame = CGRectMake(0, 140, self.view.bounds.size.width, self.view.bounds.size.height - 140);
+    self.dotView.frame = CGRectMake(0, 140, self.view.bounds.size.width, 40);
+    self.containerView.frame = CGRectMake(0, 180, self.view.bounds.size.width, self.view.bounds.size.height - 180);
     
     [self.view addSubview:self.titleView];
+    [self.view addSubview:self.dotView];
     [self.view addSubview:self.containerView];
 }
 
@@ -54,7 +57,6 @@
         _titleView.cellBackgroundUnselectedColor = UIColor.blueColor;
         _titleView.cellBackgroundColorGradientEnabled = YES;
         
-        
         _titleView.titles = @[@"你的", @"我的", @"他的"];
         _titleView.selectItemOnScrollHalf = YES;
         _titleView.delegate = self;
@@ -66,6 +68,18 @@
         _titleView.listContainer = self.containerView;
     }
     return _titleView;
+}
+
+- (JXCategoryDotZoomView *)dotView {
+    if (!_dotView) {
+        _dotView = [[JXCategoryDotZoomView alloc] init];
+        _dotView.titles = @[@"你好", @"我好", @"他好"];
+        _dotView.dotOffset = CGPointMake(5, 0);
+        _dotView.dotStyle = JXCategoryDotStyle_Hollow;
+        
+        _dotView.listContainer = self.containerView;
+    }
+    return _dotView;
 }
 
 - (JXCategoryListContainerView *)containerView {

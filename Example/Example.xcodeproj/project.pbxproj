@@ -29,7 +29,7 @@
 		60A8382525B000D600F4B1BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60A8382725B000D600F4B1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60A8382825B000D600F4B1BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		60A838BC25B003D600F4B1BD /* JXCategoryViewExt.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = JXCategoryViewExt.podspec; path = ../../JXCategoryViewExt.podspec; sourceTree = "<group>"; };
+		60A838BC25B003D600F4B1BD /* JXCategoryViewExt.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = JXCategoryViewExt.podspec; path = ../../JXCategoryViewExt.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		60A83B2725B169C700F4B1BD /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		60A83B2825B169C700F4B1BD /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		60A83B3725B1757B00F4B1BD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };

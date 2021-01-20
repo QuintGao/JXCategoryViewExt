@@ -6,6 +6,7 @@ target 'Example' do
   pod 'JXCategoryViewExt/Title', :path => '../../JXCategoryViewExt'
   pod 'JXCategoryViewExt/VerticalZoomTitle', :path => '../../JXCategoryViewExt'
   pod 'JXCategoryViewExt/Dot', :path => '../../JXCategoryViewExt'
+  pod 'JXCategoryViewExt/DotZoom', :path => '../../JXCategoryViewExt'
   pod 'JXCategoryViewExt/Image', :path => '../../JXCategoryViewExt'
   pod 'JXCategoryViewExt/TitleImage', :path => '../../JXCategoryViewExt'
   pod 'JXCategoryViewExt/TitleAttribute', :path => '../../JXCategoryViewExt'

@@ -1,6 +1,6 @@
 {
   "name": "JXCategoryViewExt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "summary": "JXCategoryView extensions and optimize",
   "homepage": "https://github.com/QuintGao/JXCategoryViewExt",
   "license": "MIT",
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/QuintGao/JXCategoryViewExt.git",
-    "tag": "1.0.0"
+    "tag": "1.0.1"
   },
   "requires_arc": true,
   "default_subspecs": "Core",
@@ -60,6 +60,15 @@
     {
       "name": "Dot",
       "source_files": "JXCategoryView/Dot",
+      "dependencies": {
+        "JXCategoryViewExt/Title": [
+
+        ]
+      }
+    },
+    {
+      "name": "DotZoom",
+      "source_files": "JXCategoryView/DotZoom",
       "dependencies": {
         "JXCategoryViewExt/Title": [
 

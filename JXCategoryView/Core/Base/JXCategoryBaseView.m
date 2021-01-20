@@ -669,11 +669,9 @@ struct DelegateFlags {
         }
         
         if (self.isSelectItemOnScrollHalf) {
-            NSInteger index = 0;
+            NSInteger index = baseIndex;
             if (remainderRatio > 0.5) {
                 index = baseIndex + 1;
-            }else {
-                index = baseIndex;
             }
             if (self.selectedIndex == index) return;
             [self selectCellAtIndex:index selectedType:JXCategoryCellSelectedTypeScroll animated:NO];

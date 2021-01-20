@@ -48,6 +48,9 @@ pod 'JXCategoryViewExt/TitleAttribute'
 // title+小红点
 pod 'JXCategoryViewExt/Dot'
 
+// title+小红点缩放
+pod 'JXCategoryViewExt/DotZoom'
+
 // title+数字
 pod 'JXCategoryViewExt/Number'
 
@@ -76,3 +79,6 @@ pod 'JXCategoryViewExt/Indicator/Triangle'
 pod 'JXCategoryViewExt/Indicator/DotLine'
 ```
 
+## 更新记录
+* 1.0.0 2021.01.15 优化及bug修改，将pod拆分为多个
+* 1.0.1 2021.01.19 新增标题圆点缩放样式，可实现网易新闻效果
