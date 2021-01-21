@@ -67,6 +67,9 @@ pod 'JXCategoryViewExt/VerticalZoomTitle'
 
 #### 指示器
 ```
+// 背景
+pod 'JXCategoryViewExt/Background'
+
 // 线
 pod 'JXCategoryViewExt/Indicator/Line'
 
@@ -84,6 +87,11 @@ pod 'JXCategoryViewExt/Indicator/Triangle'
 
 // 点线
 pod 'JXCategoryViewExt/Indicator/DotLine'
+```
+
+#### RTL
+```
+pod 'JXCategoryViewExt/RTL'
 ```
 
 ## 更新记录
