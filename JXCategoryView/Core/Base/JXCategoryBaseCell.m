@@ -7,7 +7,11 @@
 //
 
 #import "JXCategoryBaseCell.h"
+#if __has_include(<JXCategoryViewExt/RTLManager.h>)
+#import <JXCategoryViewExt/RTLManager.h>
+#elif __has_include("RTLManager.h")
 #import "RTLManager.h"
+#endif
 
 @interface JXCategoryBaseCell ()
 @property (nonatomic, strong) JXCategoryBaseCellModel *cellModel;
@@ -50,8 +54,10 @@
 - (void)initializeViews {
     _animationBlockArray = [NSMutableArray array];
 
+#if HasRTL
     [RTLManager horizontalFlipViewIfNeeded:self];
     [RTLManager horizontalFlipViewIfNeeded:self.contentView];
+#endif
 }
 
 - (void)reloadData:(JXCategoryBaseCellModel *)cellModel {

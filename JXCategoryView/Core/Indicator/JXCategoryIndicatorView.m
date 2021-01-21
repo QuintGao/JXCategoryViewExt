@@ -7,8 +7,13 @@
 //
 
 #import "JXCategoryIndicatorView.h"
-#import "JXCategoryIndicatorBackgroundView.h"
 #import "JXCategoryFactory.h"
+
+#if __has_include(<JXCategoryViewExt/JXCategoryIndicatorBackgroundView.h>)
+#import <JXCategoryViewExt/JXCategoryIndicatorBackgroundView.h>
+#elif __has_include("JXCategoryIndicatorBackgroundView.h")
+#import "JXCategoryIndicatorBackgroundView.h"
+#endif
 
 @interface JXCategoryIndicatorView()
 
@@ -70,11 +75,13 @@
             indicatorParamsModel.selectedCellFrame = selectedCellFrame;
             [indicator jx_refreshState:indicatorParamsModel];
 
+#if HasIndicatorBackgroundView
             if ([indicator isKindOfClass:[JXCategoryIndicatorBackgroundView class]]) {
                 CGRect maskFrame = indicator.frame;
                 maskFrame.origin.x = maskFrame.origin.x - selectedCellFrame.origin.x;
                 selectedCellModel.backgroundViewMaskFrame = maskFrame;
             }
+#endif
         }
     }
 }
@@ -131,6 +138,7 @@
 
         for (UIView<JXCategoryIndicatorProtocol> *indicator in self.indicators) {
             [indicator jx_contentScrollViewDidScroll:indicatorParamsModel];
+#if HasIndicatorBackgroundView
             if ([indicator isKindOfClass:[JXCategoryIndicatorBackgroundView class]]) {
                 CGRect leftMaskFrame = indicator.frame;
                 leftMaskFrame.origin.x = leftMaskFrame.origin.x - leftCellFrame.origin.x;
@@ -140,6 +148,7 @@
                 rightMaskFrame.origin.x = rightMaskFrame.origin.x - rightCellFrame.origin.x;
                 rightCellModel.backgroundViewMaskFrame = rightMaskFrame;
             }
+#endif
         }
 
         JXCategoryBaseCell *leftCell = (JXCategoryBaseCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:baseIndex inSection:0]];
@@ -167,11 +176,14 @@
         indicatorParamsModel.selectedCellFrame = clickedCellFrame;
         indicatorParamsModel.selectedType = selectedType;
         [indicator jx_selectedCell:indicatorParamsModel];
+        
+#if HasIndicatorBackgroundView
         if ([indicator isKindOfClass:[JXCategoryIndicatorBackgroundView class]]) {
             CGRect maskFrame = indicator.frame;
             maskFrame.origin.x = maskFrame.origin.x - clickedCellFrame.origin.x;
             selectedCellModel.backgroundViewMaskFrame = maskFrame;
         }
+#endif
     }
 
     JXCategoryIndicatorCell *selectedCell = (JXCategoryIndicatorCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];

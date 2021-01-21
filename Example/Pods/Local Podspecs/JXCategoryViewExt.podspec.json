@@ -1,6 +1,6 @@
 {
   "name": "JXCategoryViewExt",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "summary": "JXCategoryView extensions and optimize",
   "homepage": "https://github.com/QuintGao/JXCategoryViewExt",
   "license": "MIT",
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/QuintGao/JXCategoryViewExt.git",
-    "tag": "1.0.1"
+    "tag": "1.0.2"
   },
   "requires_arc": true,
   "default_subspecs": "Core",
@@ -97,6 +97,15 @@
       "name": "Indicator",
       "subspecs": [
         {
+          "name": "Background",
+          "source_files": "JXCategoryView/Indicator/Background",
+          "dependencies": {
+            "JXCategoryViewExt/Core": [
+
+            ]
+          }
+        },
+        {
           "name": "Line",
           "source_files": "JXCategoryView/Indicator/Line",
           "dependencies": {
@@ -151,6 +160,15 @@
           }
         }
       ]
+    },
+    {
+      "name": "RTL",
+      "source_files": "JXCategoryView/RTL",
+      "dependencies": {
+        "JXCategoryViewExt/Core": [
+
+        ]
+      }
     }
   ]
 }

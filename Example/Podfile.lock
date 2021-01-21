@@ -1,59 +1,23 @@
 PODS:
-  - JXCategoryViewExt/Core (1.0.1)
-  - JXCategoryViewExt/Dot (1.0.1):
+  - JXCategoryViewExt/Core (1.0.2)
+  - JXCategoryViewExt/DotZoom (1.0.2):
     - JXCategoryViewExt/Title
-  - JXCategoryViewExt/DotZoom (1.0.1):
-    - JXCategoryViewExt/Title
-  - JXCategoryViewExt/Image (1.0.1):
+  - JXCategoryViewExt/Indicator/Background (1.0.2):
     - JXCategoryViewExt/Core
-  - JXCategoryViewExt/Indicator (1.0.1):
-    - JXCategoryViewExt/Indicator/Ball (= 1.0.1)
-    - JXCategoryViewExt/Indicator/DotLine (= 1.0.1)
-    - JXCategoryViewExt/Indicator/Image (= 1.0.1)
-    - JXCategoryViewExt/Indicator/Line (= 1.0.1)
-    - JXCategoryViewExt/Indicator/RainbowLine (= 1.0.1)
-    - JXCategoryViewExt/Indicator/Triangle (= 1.0.1)
-  - JXCategoryViewExt/Indicator/Ball (1.0.1):
+  - JXCategoryViewExt/Title (1.0.2):
     - JXCategoryViewExt/Core
-  - JXCategoryViewExt/Indicator/DotLine (1.0.1):
-    - JXCategoryViewExt/Core
-  - JXCategoryViewExt/Indicator/Image (1.0.1):
-    - JXCategoryViewExt/Core
-  - JXCategoryViewExt/Indicator/Line (1.0.1):
-    - JXCategoryViewExt/Core
-  - JXCategoryViewExt/Indicator/RainbowLine (1.0.1):
-    - JXCategoryViewExt/Indicator/Line
-  - JXCategoryViewExt/Indicator/Triangle (1.0.1):
-    - JXCategoryViewExt/Core
-  - JXCategoryViewExt/Number (1.0.1):
-    - JXCategoryViewExt/Title
-  - JXCategoryViewExt/Title (1.0.1):
-    - JXCategoryViewExt/Core
-  - JXCategoryViewExt/TitleAttribute (1.0.1):
-    - JXCategoryViewExt/Title
-  - JXCategoryViewExt/TitleImage (1.0.1):
-    - JXCategoryViewExt/Title
-  - JXCategoryViewExt/VerticalZoomTitle (1.0.1):
-    - JXCategoryViewExt/Title
 
 DEPENDENCIES:
-  - JXCategoryViewExt/Dot (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/DotZoom (from `../../JXCategoryViewExt`)
-  - JXCategoryViewExt/Image (from `../../JXCategoryViewExt`)
-  - JXCategoryViewExt/Indicator (from `../../JXCategoryViewExt`)
-  - JXCategoryViewExt/Number (from `../../JXCategoryViewExt`)
-  - JXCategoryViewExt/Title (from `../../JXCategoryViewExt`)
-  - JXCategoryViewExt/TitleAttribute (from `../../JXCategoryViewExt`)
-  - JXCategoryViewExt/TitleImage (from `../../JXCategoryViewExt`)
-  - JXCategoryViewExt/VerticalZoomTitle (from `../../JXCategoryViewExt`)
+  - JXCategoryViewExt/Indicator/Background (from `../../JXCategoryViewExt`)
 
 EXTERNAL SOURCES:
   JXCategoryViewExt:
     :path: "../../JXCategoryViewExt"
 
 SPEC CHECKSUMS:
-  JXCategoryViewExt: 7debbbbd0b9e26dc93e27c738ed17471cb470e08
+  JXCategoryViewExt: c0b9f23d5b0ded64c8f1ac7b84d682c6ac76af1b
 
-PODFILE CHECKSUM: 7ce09db461b65d06bc81bcfd518e328af0e51422
+PODFILE CHECKSUM: 9d5bfec647279d1f7ecfc3f7f6e54f5979f301b8
 
 COCOAPODS: 1.10.0

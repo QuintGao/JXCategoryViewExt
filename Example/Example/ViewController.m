@@ -9,6 +9,8 @@
 #import <JXCategoryViewExt/JXCategoryView.h>
 #import "ListViewController.h"
 
+#define HasAFNetworking (__has_include(<AFNetworking/AFNetworking.h>) || __has_include("AFNetworking.h"))
+
 @interface ViewController ()<JXCategoryListContainerViewDelegate, JXCategoryViewDelegate>
 
 @property (nonatomic, strong) JXCategoryTitleView *titleView;
@@ -33,6 +35,13 @@
     [self.view addSubview:self.titleView];
     [self.view addSubview:self.dotView];
     [self.view addSubview:self.containerView];
+    
+#if HasRTL
+    NSLog(@"111");
+#else
+    NSLog(@"000");
+#endif
+    
 }
 
 #pragma mark - JXCategoryListContainerViewDelegate
@@ -63,6 +72,7 @@
         
         JXCategoryIndicatorBackgroundView *indicator = [JXCategoryIndicatorBackgroundView new];
         indicator.indicatorCornerRadius = 4;
+        indicator.indicatorWidthIncrement = 20;
         _titleView.indicators = @[indicator];
         
         _titleView.listContainer = self.containerView;

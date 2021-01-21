@@ -8,7 +8,11 @@
 
 #import "JXCategoryListContainerView.h"
 #import <objc/runtime.h>
+#if __has_include(<JXCategoryViewExt/RTLManager.h>)
+#import <JXCategoryViewExt/RTLManager.h>
+#elif __has_include("RTLManager.h")
 #import "RTLManager.h"
+#endif
 
 @interface JXCategoryListContainerViewController : UIViewController
 @property (copy) void(^viewWillAppearBlock)(void);
@@ -108,7 +112,9 @@
                 self.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
             }
         }
+#if HasRTL
         [RTLManager horizontalFlipViewIfNeeded:self.scrollView];
+#endif
         [self.containerVC.view addSubview:self.scrollView];
     }else {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
@@ -138,10 +144,12 @@
                 self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
             }
         }
+#if HasRTL
         if ([RTLManager supportRTL]) {
             self.collectionView.semanticContentAttribute = UISemanticContentAttributeForceLeftToRight;
             [RTLManager horizontalFlipView:self.collectionView];
         }
+#endif
         [self.containerVC.view addSubview:self.collectionView];
         //让外部统一访问scrollView
         _scrollView = _collectionView;
@@ -364,7 +372,9 @@
     if (self.containerType == JXCategoryListContainerType_ScrollView) {
         [list listView].frame = CGRectMake(index*self.scrollView.bounds.size.width, 0, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
         [self.scrollView addSubview:[list listView]];
+#if HasRTL
         [RTLManager horizontalFlipViewIfNeeded:[list listView]];
+#endif
     }else {
         UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];
         for (UIView *subview in cell.contentView.subviews) {
@@ -410,7 +420,9 @@
                 if ([list listView].superview == nil) {
                     [list listView].frame = CGRectMake(index*self.scrollView.bounds.size.width, 0, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
                     [self.scrollView addSubview:[list listView]];
+#if HasRTL
                     [RTLManager horizontalFlipViewIfNeeded:[list listView]];
+#endif
 
                     if (list && [list respondsToSelector:@selector(listWillAppear)]) {
                         [list listWillAppear];

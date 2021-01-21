@@ -9,7 +9,12 @@
 #import "JXCategoryBaseView.h"
 #import "JXCategoryFactory.h"
 #import "JXCategoryViewAnimator.h"
+
+#if __has_include(<JXCategoryViewExt/RTLManager.h>)
+#import <JXCategoryViewExt/RTLManager.h>
+#elif __has_include("RTLManager.h")
 #import "RTLManager.h"
+#endif
 
 struct DelegateFlags {
     unsigned int didSelectedItemAtIndexFlag : 1;
@@ -362,10 +367,12 @@ struct DelegateFlags {
             self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
     }
+#if HasRTL
     if ([RTLManager supportRTL]) {
         self.collectionView.semanticContentAttribute = UISemanticContentAttributeForceLeftToRight;
         [RTLManager horizontalFlipView:self.collectionView];
     }
+#endif
     [self addSubview:self.collectionView];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];

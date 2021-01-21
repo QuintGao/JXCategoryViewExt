@@ -87,5 +87,6 @@ pod 'JXCategoryViewExt/Indicator/DotLine'
 ```
 
 ## 更新记录
-* 1.0.0 2021.01.15 优化及bug修改，将pod拆分为多个
+* 1.0.2 2021.01.21 将IndicatorBackgroundView和RTL移除基类，单独pod
 * 1.0.1 2021.01.19 新增标题圆点缩放样式，可实现网易新闻效果
+* 1.0.0 2021.01.15 优化及bug修改，将pod拆分为多个

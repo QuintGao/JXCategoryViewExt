@@ -41,3 +41,8 @@ typedef NS_ENUM(NSUInteger, JXCategoryIndicatorScrollStyle) {
 };
 
 #define JXCategoryViewDeprecated(instead) NS_DEPRECATED(2_0, 2_0, 2_0, 2_0, instead)
+
+// 2021.1.21添加 by：QuintGao
+#define HasIndicatorBackgroundView (__has_include(<JXCategoryViewExt/JXCategoryIndicatorBackgroundView.h>) || __has_include("JXCategoryIndicatorBackgroundView.h"))
+
+#define HasRTL (__has_include(<JXCategoryViewExt/RTLManager.h>) || __has_include("RTLManager.h"))

@@ -17,7 +17,6 @@ FOUNDATION_EXPORT const unsigned char JXCategoryViewExtVersionString[];
 #import <JXCategoryViewExt/JXCategoryBaseView.h>
 #import <JXCategoryViewExt/JXCategoryIndicatorView.h>
 #import <JXCategoryViewExt/JXCategoryIndicatorComponentView.h>
-#import <JXCategoryViewExt/JXCategoryIndicatorBackgroundView.h>
 #import <JXCategoryViewExt/JXCategoryFactory.h>
 #import <JXCategoryViewExt/JXCategoryIndicatorProtocol.h>
 #import <JXCategoryViewExt/JXCategoryListContainerView.h>
@@ -56,6 +55,10 @@ FOUNDATION_EXPORT const unsigned char JXCategoryViewExtVersionString[];
 #endif
 
 // 指示器
+#if __has_include(<JXCategoryViewExt/JXCategoryIndicatorBackgroundView.h>)
+#import <JXCategoryViewExt/JXCategoryIndicatorBackgroundView.h>
+#endif
+
 #if __has_include(<JXCategoryViewExt/JXCategoryIndicatorLineView.h>)
 #import <JXCategoryViewExt/JXCategoryIndicatorLineView.h>
 #endif
@@ -78,4 +81,8 @@ FOUNDATION_EXPORT const unsigned char JXCategoryViewExtVersionString[];
 
 #if __has_include(<JXCategoryViewExt/JXCategoryIndicatorDotLineView.h>)
 #import <JXCategoryViewExt/JXCategoryIndicatorDotLineView.h>
+#endif
+
+#if __has_include(<JXCategoryViewExt/JXCategoryListContainerRTLCell.h>)
+#import <JXCategoryViewExt/JXCategoryListContainerRTLCell.h>
 #endif

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "JXCategoryViewExt"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "JXCategoryView extensions and optimize"
   s.homepage     = "https://github.com/QuintGao/JXCategoryViewExt"
   s.license      = "MIT"
@@ -59,6 +59,11 @@ Pod::Spec.new do |s|
   
   # ――― 指示器 ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.subspec 'Indicator' do |ss|
+    ss.subspec 'Background' do |sss|
+      sss.source_files = 'JXCategoryView/Indicator/Background'
+      sss.dependency 'JXCategoryViewExt/Core'
+    end
+      
     ss.subspec 'Line' do |sss|
       sss.source_files = 'JXCategoryView/Indicator/Line'
       sss.dependency 'JXCategoryViewExt/Core'
@@ -88,5 +93,11 @@ Pod::Spec.new do |s|
       sss.source_files = 'JXCategoryView/Indicator/DotLine'
       sss.dependency 'JXCategoryViewExt/Core'
     end
+  end
+  
+  # ――― 其他 ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  s.subspec 'RTL' do |ss|
+    ss.source_files = 'JXCategoryView/RTL'
+    ss.dependency 'JXCategoryViewExt/Core'
   end
 end
