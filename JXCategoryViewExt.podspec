@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "JXCategoryViewExt"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "JXCategoryView extensions and optimize"
   s.homepage     = "https://github.com/QuintGao/JXCategoryViewExt"
   s.license      = "MIT"
@@ -20,6 +20,11 @@ Pod::Spec.new do |s|
   s.subspec 'Title' do |ss|
     ss.source_files = 'JXCategoryView/Title'
     ss.dependency 'JXCategoryViewExt/Core'
+  end
+  
+  s.subspec 'SubTitle' do |ss|
+    ss.source_files = 'JXCategoryView/SubTitle'
+    ss.dependency 'JXCategoryViewExt/Title'
   end
   
   s.subspec 'Image' do |ss|
@@ -67,6 +72,11 @@ Pod::Spec.new do |s|
     ss.subspec 'Line' do |sss|
       sss.source_files = 'JXCategoryView/Indicator/Line'
       sss.dependency 'JXCategoryViewExt/Core'
+    end
+    
+    ss.subspec 'AlignmentLine' do |sss|
+      sss.source_files = 'JXCategoryView/Indicator/AlignmentLine'
+      sss.dependency 'JXCategoryViewExt/Indicator/Line'
     end
     
     ss.subspec 'RainbowLine' do |sss|

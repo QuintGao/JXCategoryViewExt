@@ -31,6 +31,15 @@
       }
     },
     {
+      "name": "SubTitle",
+      "source_files": "JXCategoryView/SubTitle",
+      "dependencies": {
+        "JXCategoryViewExt/Title": [
+
+        ]
+      }
+    },
+    {
       "name": "Image",
       "source_files": "JXCategoryView/Image",
       "dependencies": {
@@ -110,6 +119,15 @@
           "source_files": "JXCategoryView/Indicator/Line",
           "dependencies": {
             "JXCategoryViewExt/Core": [
+
+            ]
+          }
+        },
+        {
+          "name": "AlignmentLine",
+          "source_files": "JXCategoryView/Indicator/AlignmentLine",
+          "dependencies": {
+            "JXCategoryViewExt/Indicator/Line": [
 
             ]
           }

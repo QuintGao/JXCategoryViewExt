@@ -6,16 +6,17 @@
 //  Copyright © 2019 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryIndicatorComponentView.h"
+#import "JXCategoryIndicatorLineView.h"
 
 typedef NS_ENUM(NSUInteger, JXCategoryIndicatorAlignmentStyle) {
     JXCategoryIndicatorAlignmentStyleLeading,
+    JXCategoryIndicatorAlignmentStyleCenter,
     JXCategoryIndicatorAlignmentStyleTrailing,
 };
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JXCategoryIndicatorAlignmentLineView : JXCategoryIndicatorComponentView
+@interface JXCategoryIndicatorAlignmentLineView : JXCategoryIndicatorLineView
 @property (nonatomic, assign) JXCategoryIndicatorAlignmentStyle alignmentStyle;
 @end
 
