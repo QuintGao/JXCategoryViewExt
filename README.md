@@ -28,7 +28,7 @@
 2、增加属性selectItemOnScrollHalf，可控制在滑动到一半的时候选中下一个item
 
 #### bug修改
-1、修复某些情况下将listView的frame设置为CGRectZero导致使用Masonry布局时出现报错
+1、修复某些情况下将listView的frame设置为CGRectZero导致使用Masonry布局时出现报错  
 2、修复某些情况下导致的Unbalanced calls to begin/end appearance transitions for XXXX
 
 ## pod扩展
