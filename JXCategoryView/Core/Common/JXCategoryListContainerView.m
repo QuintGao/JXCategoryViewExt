@@ -345,8 +345,13 @@
     }else {
         [self.collectionView reloadData];
     }
-    [self listWillAppear:self.currentIndex];
-    [self listDidAppear:self.currentIndex];
+    // 2021.3.8 bug fix by QuintGao
+    // 修复某些情况下导致的Unbalanced calls to begin/end appearance transitions for XXXX
+    // 延时调用可使cell创建在列表控制器加载之前执行，从而避免控制器在cell创建之前加载
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self listWillAppear:self.currentIndex];
+        [self listDidAppear:self.currentIndex];
+    });
 }
 
 #pragma mark - Private

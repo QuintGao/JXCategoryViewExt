@@ -7,7 +7,7 @@
 <a href=""><img src="https://img.shields.io/badge/support-ios%208%2B-orange.svg"></a>
 </p>
 
-该库是对[JXCategoryView](https://github.com/pujiaxin33/JXCategoryView/)的扩展及优化，目前的JXCategoryView版本1.5.8，JXCategoryViewExt版本1.0.0
+该库是对[JXCategoryView](https://github.com/pujiaxin33/JXCategoryView/)的扩展及优化，目前的JXCategoryView版本1.5.8，JXCategoryViewExt版本1.0.4
 
 ## 优化及bug修改
 
@@ -29,6 +29,7 @@
 
 #### bug修改
 1、修复某些情况下将listView的frame设置为CGRectZero导致使用Masonry布局时出现报错
+2、修复某些情况下导致的Unbalanced calls to begin/end appearance transitions for XXXX
 
 ## pod扩展
 JXCategoryViewExt优化了JXCategoryView的pod方式，将不同组件进行拆分，可按需pod
@@ -101,6 +102,7 @@ pod 'JXCategoryViewExt/RTL'
 ```
 
 ## 更新记录
+* 1.0.4 2021.03.08 修复某些情况下导致的Unbalanced calls to begin/end appearance transitions for xxx
 * 1.0.3 2021.01.25 增加subTitle分类样式和alignmentLine指示器样式
 * 1.0.2 2021.01.21 将IndicatorBackgroundView和RTL移除基类，单独pod
 * 1.0.1 2021.01.19 新增标题圆点缩放样式，可实现网易新闻效果

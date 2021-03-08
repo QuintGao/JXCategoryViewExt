@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "JXCategoryViewExt"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "JXCategoryView extensions and optimize"
   s.homepage     = "https://github.com/QuintGao/JXCategoryViewExt"
   s.license      = "MIT"
