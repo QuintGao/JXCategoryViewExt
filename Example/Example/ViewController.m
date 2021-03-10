@@ -35,18 +35,11 @@
     [self.view addSubview:self.titleView];
     [self.view addSubview:self.dotView];
     [self.view addSubview:self.containerView];
-    
-#if HasRTL
-    NSLog(@"111");
-#else
-    NSLog(@"000");
-#endif
-    
 }
 
 #pragma mark - JXCategoryListContainerViewDelegate
 - (NSInteger)numberOfListsInlistContainerView:(JXCategoryListContainerView *)listContainerView {
-    return 3;
+    return self.titleView.titles.count;
 }
 
 - (id<JXCategoryListContentViewDelegate>)listContainerView:(JXCategoryListContainerView *)listContainerView initListForIndex:(NSInteger)index {
@@ -66,7 +59,7 @@
         _titleView.cellBackgroundUnselectedColor = UIColor.blueColor;
         _titleView.cellBackgroundColorGradientEnabled = YES;
         
-        _titleView.titles = @[@"你的", @"我的", @"他的"];
+        _titleView.titles = @[@"你的", @"我的", @"他的", @"你的", @"我的", @"他的", @"你的", @"我的", @"他的"];
         _titleView.selectItemOnScrollHalf = YES;
         _titleView.delegate = self;
         
@@ -83,7 +76,7 @@
 - (JXCategoryDotZoomView *)dotView {
     if (!_dotView) {
         _dotView = [[JXCategoryDotZoomView alloc] init];
-        _dotView.titles = @[@"你好", @"我好", @"他好"];
+        _dotView.titles = @[@"你好", @"我好", @"他好", @"你好", @"我好", @"他好", @"你好", @"我好", @"他好"];
         _dotView.dotOffset = CGPointMake(5, 0);
         _dotView.dotStyle = JXCategoryDotStyle_Hollow;
         

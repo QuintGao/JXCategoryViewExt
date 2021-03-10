@@ -681,7 +681,7 @@ struct DelegateFlags {
                 index = baseIndex + 1;
             }
             if (self.selectedIndex == index) return;
-            [self selectCellAtIndex:index selectedType:JXCategoryCellSelectedTypeScroll animated:NO];
+            [self selectCellAtIndex:index selectedType:JXCategoryCellSelectedTypeScroll animated:YES];
         }
 
         if (self.delegateFlags.scrollingFromLeftIndexToRightIndexFlag) {
