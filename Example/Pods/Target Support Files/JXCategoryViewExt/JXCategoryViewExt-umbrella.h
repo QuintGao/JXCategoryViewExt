@@ -33,6 +33,9 @@
 #import "JXCategoryTitleCell.h"
 #import "JXCategoryTitleCellModel.h"
 #import "JXCategoryTitleView.h"
+#import "JXCategoryTitleImageCell.h"
+#import "JXCategoryTitleImageCellModel.h"
+#import "JXCategoryTitleImageView.h"
 
 FOUNDATION_EXPORT double JXCategoryViewExtVersionNumber;
 FOUNDATION_EXPORT const unsigned char JXCategoryViewExtVersionString[];

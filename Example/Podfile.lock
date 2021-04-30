@@ -1,23 +1,26 @@
 PODS:
-  - JXCategoryViewExt/Core (1.0.2)
-  - JXCategoryViewExt/DotZoom (1.0.2):
+  - JXCategoryViewExt/Core (1.0.6)
+  - JXCategoryViewExt/DotZoom (1.0.6):
     - JXCategoryViewExt/Title
-  - JXCategoryViewExt/Indicator/Background (1.0.2):
+  - JXCategoryViewExt/Indicator/Background (1.0.6):
     - JXCategoryViewExt/Core
-  - JXCategoryViewExt/Title (1.0.2):
+  - JXCategoryViewExt/Title (1.0.6):
     - JXCategoryViewExt/Core
+  - JXCategoryViewExt/TitleImage (1.0.6):
+    - JXCategoryViewExt/Title
 
 DEPENDENCIES:
   - JXCategoryViewExt/DotZoom (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/Indicator/Background (from `../../JXCategoryViewExt`)
+  - JXCategoryViewExt/TitleImage (from `../../JXCategoryViewExt`)
 
 EXTERNAL SOURCES:
   JXCategoryViewExt:
     :path: "../../JXCategoryViewExt"
 
 SPEC CHECKSUMS:
-  JXCategoryViewExt: a607ae3b2de7c4221fc8ab32a1119d2b21890830
+  JXCategoryViewExt: 5f4ae88cf40d4762c780157917d349a09efaa650
 
-PODFILE CHECKSUM: 9d5bfec647279d1f7ecfc3f7f6e54f5979f301b8
+PODFILE CHECKSUM: b920cba5ca7085a37332cd30b8e3e3d9a9bc6b2c
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

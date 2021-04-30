@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "JXCategoryViewExt"
-  s.version      = "1.0.5"
+  s.version      = "1.0.6"
   s.summary      = "JXCategoryView extensions and optimize"
   s.homepage     = "https://github.com/QuintGao/JXCategoryViewExt"
   s.license      = "MIT"
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.default_subspec = 'Core'
   
-  # ――― 基础组件 ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  # ――― 基础组件 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.subspec 'Core' do |ss|
     ss.source_files = 'JXCategoryView/Core/**/*.{h,m}'
   end
