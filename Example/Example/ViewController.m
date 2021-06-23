@@ -55,18 +55,30 @@
 - (JXCategoryTitleView *)titleView {
     if (!_titleView) {
         _titleView = [[JXCategoryTitleView alloc] init];
-        _titleView.cellBackgroundSelectedColor = UIColor.grayColor;
-        _titleView.cellBackgroundUnselectedColor = UIColor.blueColor;
-        _titleView.cellBackgroundColorGradientEnabled = YES;
+//        _titleView.cellBackgroundSelectedColor = UIColor.grayColor;
+//        _titleView.cellBackgroundUnselectedColor = UIColor.blueColor;
+//        _titleView.cellBackgroundColorGradientEnabled = YES;
+        
+//        _titleView.titleFont = [UIFont systemFontOfSize:15];
+//        _titleView.titleSelectedFont = [UIFont boldSystemFontOfSize:18];
+//        _titleView.titleLabelZoomEnabled = YES;
+//        _titleView.titleLabelZoomEndUseSelectedFontEnabled = YES;
+        
+        _titleView.titleFont = [UIFont fontWithName:@"PingFangSC-Regular" size:16];
+        _titleView.titleSelectedFont = [UIFont fontWithName:@"PingFangSC-Medium" size:20];
+        _titleView.titleLabelZoomEnabled = YES;
+        _titleView.titleLabelZoomScale = 1.25;
+        _titleView.titleLabelZoomEndUseSelectedFontEnabled = YES;
         
         _titleView.titles = @[@"你的", @"我的", @"他的", @"你的", @"我的", @"他的", @"你的", @"我的", @"他的"];
-        _titleView.selectItemOnScrollHalf = YES;
-        _titleView.delegate = self;
+//        _titleView.selectItemOnScrollHalf = YES;
+//        _titleView.delegate = self;
+        _titleView.selectedAnimationEnabled = YES;
         
-        JXCategoryIndicatorBackgroundView *indicator = [JXCategoryIndicatorBackgroundView new];
-        indicator.indicatorCornerRadius = 4;
-        indicator.indicatorWidthIncrement = 20;
-        _titleView.indicators = @[indicator];
+//        JXCategoryIndicatorBackgroundView *indicator = [JXCategoryIndicatorBackgroundView new];
+//        indicator.indicatorCornerRadius = 4;
+//        indicator.indicatorWidthIncrement = 20;
+//        _titleView.indicators = @[indicator];
         
         _titleView.listContainer = self.containerView;
     }
@@ -77,8 +89,14 @@
     if (!_dotView) {
         _dotView = [[JXCategoryDotZoomView alloc] init];
         _dotView.titles = @[@"你好", @"我好", @"他好", @"你好", @"我好", @"他好", @"你好", @"我好", @"他好"];
-        _dotView.dotOffset = CGPointMake(5, 0);
-        _dotView.dotStyle = JXCategoryDotStyle_Hollow;
+        
+        _dotView.titleFont = [UIFont fontWithName:@"PingFangSC-Regular" size:16];
+        _dotView.titleSelectedFont = [UIFont fontWithName:@"PingFangSC-Medium" size:20];
+        _dotView.titleLabelZoomEnabled = YES;
+        _dotView.titleLabelZoomScale = 1.25;
+//        _dotView.titleLabelZoomEndUseSelectedFontEnabled = YES;
+//        _dotView.dotOffset = CGPointMake(5, 0);
+//        _dotView.dotStyle = JXCategoryDotStyle_Hollow;
         
         _dotView.listContainer = self.containerView;
     }
