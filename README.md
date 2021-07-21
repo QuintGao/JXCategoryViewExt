@@ -102,6 +102,7 @@ pod 'JXCategoryViewExt/RTL'
 ```
 
 ## 更新记录
+* 1.0.8 2021.07.21 JXCategoryTitleView支持动态设置标题
 * 1.0.7 2021.06.23 JXCategoryTitleView文字缩放优化
 * 1.0.6 2021.04.30 JXCategoryView更新到1.5.9版本
 * 1.0.5 2021.03.10 优化滑动到一半选中时的动画效果

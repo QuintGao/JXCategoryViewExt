@@ -11,13 +11,15 @@
 
 #define HasAFNetworking (__has_include(<AFNetworking/AFNetworking.h>) || __has_include("AFNetworking.h"))
 
-@interface ViewController ()<JXCategoryListContainerViewDelegate, JXCategoryViewDelegate>
+@interface ViewController ()<JXCategoryListContainerViewDelegate, JXCategoryViewDelegate, JXCategoryTitleViewDataSource>
 
 @property (nonatomic, strong) JXCategoryTitleView *titleView;
 
 @property (nonatomic, strong) JXCategoryDotZoomView   *dotView;
 
 @property (nonatomic, strong) JXCategoryListContainerView *containerView;
+
+@property (nonatomic, strong) NSArray *titles;
 
 @end
 
@@ -37,9 +39,18 @@
     [self.view addSubview:self.containerView];
 }
 
+#pragma mark - JXCategoryTitleViewDataSource
+- (NSInteger)numberOfTitleView:(JXCategoryTitleView *)titleView {
+    return self.titles.count;
+}
+
+- (NSString *)titleView:(JXCategoryTitleView *)titleView titleForIndex:(NSInteger)index {
+    return self.titles[index];
+}
+
 #pragma mark - JXCategoryListContainerViewDelegate
 - (NSInteger)numberOfListsInlistContainerView:(JXCategoryListContainerView *)listContainerView {
-    return self.titleView.titles.count;
+    return self.titles.count;
 }
 
 - (id<JXCategoryListContentViewDelegate>)listContainerView:(JXCategoryListContainerView *)listContainerView initListForIndex:(NSInteger)index {
@@ -70,7 +81,8 @@
         _titleView.titleLabelZoomScale = 1.25;
         _titleView.titleLabelZoomEndUseSelectedFontEnabled = YES;
         
-        _titleView.titles = @[@"你的", @"我的", @"他的", @"你的", @"我的", @"他的", @"你的", @"我的", @"他的"];
+        _titleView.titleDataSource = self;
+//        _titleView.titles = @[@"你的", @"我的", @"他的", @"你的", @"我的", @"他的", @"你的", @"我的", @"他的"];
 //        _titleView.selectItemOnScrollHalf = YES;
 //        _titleView.delegate = self;
         _titleView.selectedAnimationEnabled = YES;
@@ -108,6 +120,10 @@
         _containerView = [[JXCategoryListContainerView alloc] initWithType:JXCategoryListContainerType_CollectionView delegate:self];
     }
     return _containerView;
+}
+
+- (NSArray *)titles {
+    return @[@"你的", @"我的", @"他的", @"你的", @"我的", @"他的", @"你的", @"我的", @"他的"];
 }
 
 @end
