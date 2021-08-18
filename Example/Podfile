@@ -4,8 +4,10 @@ target 'Example' do
   use_frameworks!
 
   pod 'JXCategoryViewExt/DotZoom', :path => '../../JXCategoryViewExt'
+  pod 'JXCategoryViewExt/SubTitle', :path => '../../JXCategoryViewExt'
   pod 'JXCategoryViewExt/Indicator/Background', :path => '../../JXCategoryViewExt'
   pod 'JXCategoryViewExt/TitleImage', :path => '../../JXCategoryViewExt'
+  pod 'JXCategoryViewExt/Indicator/AlignmentLine', :path => '../../JXCategoryViewExt'
 #  pod 'JXCategoryViewExt/RTL', :path => '../../JXCategoryViewExt'
 
 end

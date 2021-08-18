@@ -1,17 +1,25 @@
 PODS:
-  - JXCategoryViewExt/Core (1.0.6)
-  - JXCategoryViewExt/DotZoom (1.0.6):
+  - JXCategoryViewExt/Core (1.0.8)
+  - JXCategoryViewExt/DotZoom (1.0.8):
     - JXCategoryViewExt/Title
-  - JXCategoryViewExt/Indicator/Background (1.0.6):
+  - JXCategoryViewExt/Indicator/AlignmentLine (1.0.8):
+    - JXCategoryViewExt/Indicator/Line
+  - JXCategoryViewExt/Indicator/Background (1.0.8):
     - JXCategoryViewExt/Core
-  - JXCategoryViewExt/Title (1.0.6):
+  - JXCategoryViewExt/Indicator/Line (1.0.8):
     - JXCategoryViewExt/Core
-  - JXCategoryViewExt/TitleImage (1.0.6):
+  - JXCategoryViewExt/SubTitle (1.0.8):
+    - JXCategoryViewExt/Title
+  - JXCategoryViewExt/Title (1.0.8):
+    - JXCategoryViewExt/Core
+  - JXCategoryViewExt/TitleImage (1.0.8):
     - JXCategoryViewExt/Title
 
 DEPENDENCIES:
   - JXCategoryViewExt/DotZoom (from `../../JXCategoryViewExt`)
+  - JXCategoryViewExt/Indicator/AlignmentLine (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/Indicator/Background (from `../../JXCategoryViewExt`)
+  - JXCategoryViewExt/SubTitle (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/TitleImage (from `../../JXCategoryViewExt`)
 
 EXTERNAL SOURCES:
@@ -19,8 +27,8 @@ EXTERNAL SOURCES:
     :path: "../../JXCategoryViewExt"
 
 SPEC CHECKSUMS:
-  JXCategoryViewExt: 5f4ae88cf40d4762c780157917d349a09efaa650
+  JXCategoryViewExt: ca2b1f2238f8e8c05db96321742669525456832f
 
-PODFILE CHECKSUM: b920cba5ca7085a37332cd30b8e3e3d9a9bc6b2c
+PODFILE CHECKSUM: 75ccd3f1a0c28b407ed9d4d4b0cd31f7c8817f87
 
 COCOAPODS: 1.10.1

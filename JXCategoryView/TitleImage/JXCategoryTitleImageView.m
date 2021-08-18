@@ -121,4 +121,35 @@
     return self.cellWidth;
 }
 
+
+- (CGRect)getTargetCellFrame:(NSInteger)targetIndex {
+    CGRect frame = [super getTargetCellFrame:targetIndex];
+    if (self.isIgnoreImageWidth) {
+        if (targetIndex >= 0 && targetIndex < self.imageTypes.count) {
+            JXCategoryTitleImageType type = [self.imageTypes[targetIndex] integerValue];
+            CGFloat imageWidth = 0;
+            if (type == JXCategoryTitleImageType_LeftImage || type == JXCategoryTitleImageType_RightImage) {
+                imageWidth = self.titleImageSpacing + self.imageSize.width;
+            }
+            frame.size.width -= imageWidth;
+        }
+    }
+    return frame;
+}
+
+- (CGRect)getTargetSelectedCellFrame:(NSInteger)targetIndex selectedType:(JXCategoryCellSelectedType)selectedType {
+    CGRect frame = [super getTargetSelectedCellFrame:targetIndex selectedType:selectedType];
+    if (self.isIgnoreImageWidth) {
+        if (targetIndex >= 0 && targetIndex < self.imageTypes.count) {
+            JXCategoryTitleImageType type = [self.imageTypes[targetIndex] integerValue];
+            CGFloat imageWidth = 0;
+            if (type == JXCategoryTitleImageType_LeftImage || type == JXCategoryTitleImageType_RightImage) {
+                imageWidth = self.titleImageSpacing + self.imageSize.width;
+            }
+            frame.size.width -= imageWidth;
+        }
+    }
+    return frame;
+}
+
 @end

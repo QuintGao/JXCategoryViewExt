@@ -39,4 +39,7 @@
 //使用imageURL从远端下载图片进行加载，建议使用SDWebImage等第三方库进行下载。
 @property (nonatomic, copy) void(^loadImageCallback)(UIImageView *imageView, NSURL *imageURL);
 
+// 计算指示器位置时是否忽略图片的宽度
+@property (nonatomic, assign, getter=isIgnoreImageWidth) BOOL ignoreImageWidth;
+
 @end
