@@ -132,6 +132,9 @@
                 imageWidth = self.titleImageSpacing + self.imageSize.width;
             }
             frame.size.width -= imageWidth;
+            if (type == JXCategoryTitleImageType_LeftImage) {
+                frame.origin.x += imageWidth;
+            }
         }
     }
     return frame;
@@ -147,6 +150,9 @@
                 imageWidth = self.titleImageSpacing + self.imageSize.width;
             }
             frame.size.width -= imageWidth;
+            if (type == JXCategoryTitleImageType_LeftImage) {
+                frame.origin.x += imageWidth;
+            }
         }
     }
     return frame;

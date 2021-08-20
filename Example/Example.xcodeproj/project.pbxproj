@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0DA878065519A34055D5CE2A /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0364BC77F41DA96A4AC93E8F /* Pods_Example.framework */; };
+		609FE27C26CF4FEC00B5DAB5 /* live_home_play.gif in Resources */ = {isa = PBXBuildFile; fileRef = 609FE27B26CF4FEC00B5DAB5 /* live_home_play.gif */; };
 		60A8381825B000D200F4B1BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A8381725B000D200F4B1BD /* AppDelegate.m */; };
 		60A8381E25B000D200F4B1BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A8381D25B000D200F4B1BD /* ViewController.m */; };
 		60A8382325B000D600F4B1BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60A8382225B000D600F4B1BD /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		0364BC77F41DA96A4AC93E8F /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		609FE27B26CF4FEC00B5DAB5 /* live_home_play.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = live_home_play.gif; sourceTree = "<group>"; };
 		60A8381325B000D200F4B1BD /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A8381625B000D200F4B1BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		60A8381725B000D200F4B1BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				60A8382825B000D600F4B1BD /* main.m */,
 				60A838BC25B003D600F4B1BD /* JXCategoryViewExt.podspec */,
 				60A83B3725B1757B00F4B1BD /* README.md */,
+				609FE27B26CF4FEC00B5DAB5 /* live_home_play.gif */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				60A8382625B000D600F4B1BD /* LaunchScreen.storyboard in Resources */,
 				60A8382325B000D600F4B1BD /* Assets.xcassets in Resources */,
 				60A83B3825B1757B00F4B1BD /* README.md in Resources */,
+				609FE27C26CF4FEC00B5DAB5 /* live_home_play.gif in Resources */,
 				60A838BD25B003D600F4B1BD /* JXCategoryViewExt.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

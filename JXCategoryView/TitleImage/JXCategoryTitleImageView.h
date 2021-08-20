@@ -12,6 +12,8 @@
 
 @interface JXCategoryTitleImageView : JXCategoryTitleView
 
+// 自定义imageView类
+@property (nonatomic, strong) Class imageViewClass;
 //imageInfo数组可以传入imageName字符串或者image的URL地址等，然后会通过loadImageBlock透传回来，把imageView对于图片的加载过程完全交给使用者决定。
 @property (nonatomic, strong) NSArray <id>*imageInfoArray;
 @property (nonatomic, strong) NSArray <id>*selectedImageInfoArray;

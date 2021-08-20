@@ -33,13 +33,7 @@
 
     [self.titleLabel removeFromSuperview];
 
-    _imageView = [[UIImageView alloc] init];
-    self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
-    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    self.imageViewWidthConstraint = [self.imageView.widthAnchor constraintEqualToConstant:0];
-    self.imageViewWidthConstraint.active = YES;
-    self.imageViewHeightConstraint = [self.imageView.heightAnchor constraintEqualToConstant:0];
-    self.imageViewHeightConstraint.active = YES;
+    [self initialImageViewWithClass:UIImageView.class];
 
     _stackView = [[UIStackView alloc] init];
     self.stackView.alignment = UIStackViewAlignmentCenter;
@@ -49,11 +43,24 @@
     [self.stackView.centerYAnchor constraintEqualToAnchor:self.contentView.centerYAnchor].active = YES;
 }
 
+- (void)initialImageViewWithClass:(Class)cls {
+    _imageView = [[cls alloc] init];
+    self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.imageViewWidthConstraint = [self.imageView.widthAnchor constraintEqualToConstant:0];
+    self.imageViewWidthConstraint.active = YES;
+    self.imageViewHeightConstraint = [self.imageView.heightAnchor constraintEqualToConstant:0];
+    self.imageViewHeightConstraint.active = YES;
+}
+
 - (void)reloadData:(JXCategoryBaseCellModel *)cellModel {
     [super reloadData:cellModel];
 
     JXCategoryTitleImageCellModel *myCellModel = (JXCategoryTitleImageCellModel *)cellModel;
-
+    if (myCellModel.imageViewClass) {
+        [self initialImageViewWithClass:myCellModel.imageViewClass];
+    }
+    
     self.titleLabel.hidden = NO;
     self.imageView.hidden = NO;
     [self.stackView removeArrangedSubview:self.titleLabel];
@@ -128,7 +135,7 @@
                 currentImageURL = myCellModel.selectedImageURL;
             }
         }
-        if (currentImageName && ![currentImageName isEqualToString:self.currentImageName]) {
+        if (currentImageName.length > 0 && ![currentImageName isEqualToString:self.currentImageName]) {
             self.currentImageName = currentImageName;
             self.imageView.image = [UIImage imageNamed:currentImageName];
         } else if (currentImageURL && ![currentImageURL.absoluteString isEqualToString:self.currentImageURL.absoluteString]) {

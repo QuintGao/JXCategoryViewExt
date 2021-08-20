@@ -1,6 +1,6 @@
 {
   "name": "JXCategoryViewExt",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "summary": "JXCategoryView extensions and optimize",
   "homepage": "https://github.com/QuintGao/JXCategoryViewExt",
   "license": "MIT",
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/QuintGao/JXCategoryViewExt.git",
-    "tag": "1.0.8"
+    "tag": "1.1.0"
   },
   "requires_arc": true,
   "default_subspecs": "Core",
@@ -35,6 +35,15 @@
       "source_files": "JXCategoryView/SubTitle",
       "dependencies": {
         "JXCategoryViewExt/Title": [
+
+        ]
+      }
+    },
+    {
+      "name": "SubTitleImage",
+      "source_files": "JXCategoryView/SubTitleImage",
+      "dependencies": {
+        "JXCategoryViewExt/SubTitle": [
 
         ]
       }

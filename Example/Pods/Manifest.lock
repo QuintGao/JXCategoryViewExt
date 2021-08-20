@@ -1,34 +1,46 @@
 PODS:
-  - JXCategoryViewExt/Core (1.0.8)
-  - JXCategoryViewExt/DotZoom (1.0.8):
+  - JXCategoryViewExt/Core (1.1.0)
+  - JXCategoryViewExt/DotZoom (1.1.0):
     - JXCategoryViewExt/Title
-  - JXCategoryViewExt/Indicator/AlignmentLine (1.0.8):
+  - JXCategoryViewExt/Indicator/AlignmentLine (1.1.0):
     - JXCategoryViewExt/Indicator/Line
-  - JXCategoryViewExt/Indicator/Background (1.0.8):
+  - JXCategoryViewExt/Indicator/Background (1.1.0):
     - JXCategoryViewExt/Core
-  - JXCategoryViewExt/Indicator/Line (1.0.8):
+  - JXCategoryViewExt/Indicator/Line (1.1.0):
     - JXCategoryViewExt/Core
-  - JXCategoryViewExt/SubTitle (1.0.8):
+  - JXCategoryViewExt/SubTitle (1.1.0):
     - JXCategoryViewExt/Title
-  - JXCategoryViewExt/Title (1.0.8):
+  - JXCategoryViewExt/SubTitleImage (1.1.0):
+    - JXCategoryViewExt/SubTitle
+  - JXCategoryViewExt/Title (1.1.0):
     - JXCategoryViewExt/Core
-  - JXCategoryViewExt/TitleImage (1.0.8):
+  - JXCategoryViewExt/TitleImage (1.1.0):
     - JXCategoryViewExt/Title
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
 
 DEPENDENCIES:
   - JXCategoryViewExt/DotZoom (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/Indicator/AlignmentLine (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/Indicator/Background (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/SubTitle (from `../../JXCategoryViewExt`)
+  - JXCategoryViewExt/SubTitleImage (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/TitleImage (from `../../JXCategoryViewExt`)
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - SDWebImage
 
 EXTERNAL SOURCES:
   JXCategoryViewExt:
     :path: "../../JXCategoryViewExt"
 
 SPEC CHECKSUMS:
-  JXCategoryViewExt: ca2b1f2238f8e8c05db96321742669525456832f
+  JXCategoryViewExt: d0f701288daf1d6c31d3ddcd79a6e892e81a123f
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
 
-PODFILE CHECKSUM: 75ccd3f1a0c28b407ed9d4d4b0cd31f7c8817f87
+PODFILE CHECKSUM: 9c61696621f2da48a58aaf48210419e7d58e55dd
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.0.beta.2

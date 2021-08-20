@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "JXCategoryViewExt"
-  s.version      = "1.1.0"
+  s.version      = "1.1.2"
   s.summary      = "JXCategoryView extensions and optimize"
   s.homepage     = "https://github.com/QuintGao/JXCategoryViewExt"
   s.license      = "MIT"
@@ -25,6 +25,11 @@ Pod::Spec.new do |s|
   s.subspec 'SubTitle' do |ss|
     ss.source_files = 'JXCategoryView/SubTitle'
     ss.dependency 'JXCategoryViewExt/Title'
+  end
+  
+  s.subspec 'SubTitleImage' do |ss|
+    ss.source_files = 'JXCategoryView/SubTitleImage'
+    ss.dependency 'JXCategoryViewExt/SubTitle'
   end
   
   s.subspec 'Image' do |ss|

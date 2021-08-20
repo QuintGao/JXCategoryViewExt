@@ -19,6 +19,9 @@ typedef NS_ENUM(NSUInteger, JXCategoryTitleImageType) {
 
 @interface JXCategoryTitleImageCellModel : JXCategoryTitleCellModel
 
+// 自定义imageView类
+@property (nonatomic, strong) Class imageViewClass;
+
 @property (nonatomic, assign) JXCategoryTitleImageType imageType;
 
 @property (nonatomic, strong) id imageInfo;
