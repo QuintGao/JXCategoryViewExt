@@ -105,6 +105,8 @@
         _titleView.titleLabelZoomEnabled = YES;
         _titleView.titleLabelZoomScale = 1.25;
         _titleView.titleLabelZoomEndUseSelectedFontEnabled = YES;
+        _titleView.titleLabelVerticalOffset = -10;
+        _titleView.backgroundColor = UIColor.grayColor;
         
         _titleView.titleDataSource = self;
 //        _titleView.titles = @[@"你的", @"我的", @"他的", @"你的", @"我的", @"他的", @"你的", @"我的", @"他的"];
@@ -144,6 +146,7 @@
         _subTitleView.imageTypes = @[@(JXCategorySubTitleImageType_None), @(JXCategorySubTitleImageType_Left), @(JXCategorySubTitleImageType_None), @(JXCategorySubTitleImageType_Left), @(JXCategorySubTitleImageType_Left)];
         _subTitleView.imageInfoArray = @[@"", @"zhongcao", @"", @"fangying", @"gif"];
         _subTitleView.selectedImageInfoArray = @[@"", @"zhongcao", @"", @"fangying", @"gif"];
+        _subTitleView.subTitleInCenterX = NO;
         
         __weak __typeof(self) weakSelf = self;
         _subTitleView.loadImageBlock = ^(UIImageView *imageView, id info) {
@@ -183,7 +186,7 @@
         
         JXCategoryIndicatorLineView *lineView = [[JXCategoryIndicatorLineView alloc] init];
         lineView.indicatorHeight = 16;
-        lineView.verticalMargin = 0;
+        lineView.verticalMargin = 10;
         lineView.indicatorWidthIncrement = 0;
         lineView.lineScrollOffsetX = _subTitleView.titleImageSpacing + _subTitleView.imageSize.width;
         lineView.indicatorColor = GKColorRGB(243, 136, 68);;
