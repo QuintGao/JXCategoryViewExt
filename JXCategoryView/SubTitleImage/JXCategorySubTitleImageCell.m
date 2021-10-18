@@ -43,7 +43,6 @@
     [super layoutSubviews];
     
     JXCategorySubTitleImageCellModel *myCellModel = (JXCategorySubTitleImageCellModel *)self.cellModel;
-    self.imageView.hidden = NO;
     CGSize imageSize = myCellModel.imageSize;
     self.imageViewWidthConstraint.constant = imageSize.width;
     self.imageViewHeightConstraint.constant = imageSize.height;
@@ -52,6 +51,9 @@
         [NSLayoutConstraint deactivateConstraints:@[self.subTitleLabelCenterX]];
         [self.subTitleLabel.centerXAnchor constraintEqualToAnchor:self.contentView.centerXAnchor].active = YES;
     }
+    
+    self.imageView.hidden = NO;
+    self.titleLabelCenterX.constant = 0;
     
     switch (myCellModel.imageType) {
         case JXCategorySubTitleImageType_Left:
