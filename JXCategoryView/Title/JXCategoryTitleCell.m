@@ -98,7 +98,7 @@
 
     if (myCellModel.isTitleLabelZoomEnabled) {
         //先把font设置为缩放的最大值，再缩小到最小值，最后根据当前的titleLabelZoomScale值，进行缩放更新。这样就能避免transform从小到大时字体模糊
-        UIFont *maxScaleFont = [UIFont fontWithDescriptor:myCellModel.titleFont.fontDescriptor size:myCellModel.titleFont.pointSize*myCellModel.titleLabelSelectedZoomScale];
+        UIFont *maxScaleFont = [UIFont fontWithDescriptor:myCellModel.titleSelectedFont.fontDescriptor size:myCellModel.titleFont.pointSize*myCellModel.titleLabelSelectedZoomScale];
         
         CGFloat baseScale = myCellModel.titleFont.lineHeight/maxScaleFont.lineHeight;
         if (myCellModel.isSelectedAnimationEnabled && [self checkCanStartSelectedAnimation:myCellModel]) {

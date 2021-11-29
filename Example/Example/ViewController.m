@@ -111,7 +111,7 @@
         _titleView.titleDataSource = self;
 //        _titleView.titles = @[@"你的", @"我的", @"他的", @"你的", @"我的", @"他的", @"你的", @"我的", @"他的"];
 //        _titleView.selectItemOnScrollHalf = YES;
-//        _titleView.delegate = self;
+        _titleView.delegate = self;
         _titleView.selectedAnimationEnabled = YES;
         
 //        JXCategoryIndicatorBackgroundView *indicator = [JXCategoryIndicatorBackgroundView new];

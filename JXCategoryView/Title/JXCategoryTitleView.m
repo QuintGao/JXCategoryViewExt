@@ -36,6 +36,11 @@
     return self.titleFont;
 }
 
+- (void)setTitleLabelZoomEndUseSelectedFontEnabled:(BOOL)titleLabelZoomEndUseSelectedFontEnabled {
+    _titleLabelZoomEndUseSelectedFontEnabled = titleLabelZoomEndUseSelectedFontEnabled;
+    self.needReloadOnSelectSame = YES;
+}
+
 - (void)gk_refreshCellState {
     // 刷新cell颜色
     [self.dataSource enumerateObjectsUsingBlock:^(JXCategoryBaseCellModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
