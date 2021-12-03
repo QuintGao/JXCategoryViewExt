@@ -98,13 +98,12 @@
 //        _titleView.titleFont = [UIFont systemFontOfSize:15];
 //        _titleView.titleSelectedFont = [UIFont boldSystemFontOfSize:18];
 //        _titleView.titleLabelZoomEnabled = YES;
-//        _titleView.titleLabelZoomEndUseSelectedFontEnabled = YES;
         
         _titleView.titleFont = [UIFont fontWithName:@"PingFangSC-Regular" size:16];
-        _titleView.titleSelectedFont = [UIFont fontWithName:@"PingFangSC-Medium" size:20];
+        _titleView.titleSelectedFont = [UIFont fontWithName:@"PingFangSC-Medium" size:16];
         _titleView.titleLabelZoomEnabled = YES;
         _titleView.titleLabelZoomScale = 1.25;
-        _titleView.titleLabelZoomEndUseSelectedFontEnabled = YES;
+        _titleView.titleLabelStrokeWidthEnabled = YES;
         _titleView.titleLabelVerticalOffset = -10;
         _titleView.backgroundColor = UIColor.grayColor;
         
@@ -205,7 +204,6 @@
         _dotView.titleSelectedFont = [UIFont fontWithName:@"PingFangSC-Medium" size:20];
         _dotView.titleLabelZoomEnabled = YES;
         _dotView.titleLabelZoomScale = 1.25;
-        _dotView.titleLabelZoomEndUseSelectedFontEnabled = YES;
         _dotView.dotOffset = CGPointMake(3, 3);
         _dotView.dotStyle = JXCategoryDotStyle_Hollow;
         _dotView.hollowWH = 6.0f;

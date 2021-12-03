@@ -122,10 +122,6 @@
 // author: QuintGao
 @property (nonatomic, assign, getter=isSelectItemOnScrollHalf) BOOL selectItemOnScrollHalf;
 
-// 2021.11.29 添加属性，是否在选中同一个item时也刷新cell
-// author：QuintGao
-@property (nonatomic, assign, getter=isNeedReloadOnSelectSame) BOOL needReloadOnSelectSame;
-
 /**
  选中目标index的item
 

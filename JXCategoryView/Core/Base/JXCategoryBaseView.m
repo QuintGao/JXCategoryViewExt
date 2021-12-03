@@ -496,7 +496,7 @@ struct DelegateFlags {
     }
 
     self.needReloadByBecomeActive = NO;
-    if (self.selectedIndex == targetIndex && !self.isNeedReloadOnSelectSame) {
+    if (self.selectedIndex == targetIndex) {
         //目标index和当前选中的index相等，就不需要处理后续的选中更新逻辑，只需要回调代理方法即可。
         if (selectedType == JXCategoryCellSelectedTypeCode) {
             [self.listContainer didClickSelectedItemAtIndex:targetIndex];
