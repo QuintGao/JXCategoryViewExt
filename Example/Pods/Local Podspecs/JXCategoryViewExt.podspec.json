@@ -1,6 +1,6 @@
 {
   "name": "JXCategoryViewExt",
-  "version": "1.1.0",
+  "version": "1.1.6",
   "summary": "JXCategoryView extensions and optimize",
   "homepage": "https://github.com/QuintGao/JXCategoryViewExt",
   "license": "MIT",
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/QuintGao/JXCategoryViewExt.git",
-    "tag": "1.1.0"
+    "tag": "1.1.6"
   },
   "requires_arc": true,
   "default_subspecs": "Core",
@@ -96,6 +96,15 @@
     {
       "name": "Number",
       "source_files": "JXCategoryView/Number",
+      "dependencies": {
+        "JXCategoryViewExt/Title": [
+
+        ]
+      }
+    },
+    {
+      "name": "Badge",
+      "source_files": "JXCategoryView/Badge",
       "dependencies": {
         "JXCategoryViewExt/Title": [
 

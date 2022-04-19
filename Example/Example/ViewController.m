@@ -23,6 +23,8 @@
 
 @property (nonatomic, strong) JXCategorySubTitleImageView *subTitleView;
 
+@property (nonatomic, strong) JXCategoryBadgeView *badgeView;
+
 @property (nonatomic, strong) JXCategoryListContainerView *containerView;
 
 @property (nonatomic, strong) NSArray *titles;
@@ -39,11 +41,13 @@
     self.titleView.frame = CGRectMake(0, 100, self.view.bounds.size.width, 40);
     self.dotView.frame = CGRectMake(0, 140, self.view.bounds.size.width, 40);
     self.subTitleView.frame = CGRectMake(0, 180, self.view.bounds.size.width, 54);
-    self.containerView.frame = CGRectMake(0, 240, self.view.bounds.size.width, self.view.bounds.size.height - 240);
+    self.badgeView.frame = CGRectMake(0, 234, self.view.bounds.size.width, 40);
+    self.containerView.frame = CGRectMake(0, 280, self.view.bounds.size.width, self.view.bounds.size.height - 280);
     
     [self.view addSubview:self.titleView];
     [self.view addSubview:self.dotView];
     [self.view addSubview:self.subTitleView];
+    [self.view addSubview:self.badgeView];
     [self.view addSubview:self.containerView];
 }
 
@@ -211,6 +215,36 @@
         _dotView.listContainer = self.containerView;
     }
     return _dotView;
+}
+
+- (JXCategoryBadgeView *)badgeView {
+    if (!_badgeView) {
+        _badgeView = [[JXCategoryBadgeView alloc] init];
+        _badgeView.titles = @[@"你好", @"我好", @"他好", @"大家好"];
+        _badgeView.badgeTypes = @[@(JXCategoryBadgeType_Number), @(JXCategoryBadgeType_Text), @(JXCategoryBadgeType_Dot), @(JXCategoryBadgeType_Text)];
+        _badgeView.badges = @[@"100", @"直播", @"1", @"0"];
+        _badgeView.shouldMakeRoundWhenSingleNumber = YES;
+        
+        _badgeView.badgeStringFormatterBlock = ^NSString * _Nonnull(JXCategoryBadgeType badgeType, id  _Nonnull badge) {
+            if (badgeType == JXCategoryBadgeType_Number) {
+                NSInteger count = [badge integerValue];
+                return count > 99 ? @"99+" : badge;
+            }
+            return badge;
+        };
+        
+        _badgeView.badgeStyleBlock = ^(NSInteger index, UILabel * _Nonnull badgeLabel) {
+            if (index == 1) {
+                badgeLabel.backgroundColor = UIColor.blackColor;
+                badgeLabel.textColor = UIColor.brownColor;
+            }else if (index == 2) {
+                badgeLabel.backgroundColor = UIColor.blueColor;
+            }
+        };
+        
+        _badgeView.listContainer = self.containerView;
+    }
+    return _badgeView;
 }
 
 - (JXCategoryListContainerView *)containerView {

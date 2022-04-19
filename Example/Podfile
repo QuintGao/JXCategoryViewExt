@@ -11,6 +11,9 @@ target 'Example' do
   pod 'JXCategoryViewExt/Indicator/Background', :path => '../../JXCategoryViewExt'
   pod 'JXCategoryViewExt/TitleImage', :path => '../../JXCategoryViewExt'
   pod 'JXCategoryViewExt/Indicator/AlignmentLine', :path => '../../JXCategoryViewExt'
+  pod 'JXCategoryViewExt/Badge', :path => '../../JXCategoryViewExt'
+  pod 'JXCategoryViewExt/Number', :path => '../../JXCategoryViewExt'
+  pod 'JXCategoryViewExt/Dot', :path => '../../JXCategoryViewExt'
 #  pod 'JXCategoryViewExt/RTL', :path => '../../JXCategoryViewExt'
 
 end

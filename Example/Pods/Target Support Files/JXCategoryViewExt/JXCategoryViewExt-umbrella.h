@@ -10,6 +10,9 @@
 #endif
 #endif
 
+#import "JXCategoryBadgeCell.h"
+#import "JXCategoryBadgeCellModel.h"
+#import "JXCategoryBadgeView.h"
 #import "JXCategoryBaseCell.h"
 #import "JXCategoryBaseCellModel.h"
 #import "JXCategoryBaseView.h"
@@ -26,12 +29,18 @@
 #import "JXCategoryIndicatorCellModel.h"
 #import "JXCategoryIndicatorView.h"
 #import "JXCategoryView.h"
+#import "JXCategoryDotCell.h"
+#import "JXCategoryDotCellModel.h"
+#import "JXCategoryDotView.h"
 #import "JXCategoryDotZoomCell.h"
 #import "JXCategoryDotZoomCellModel.h"
 #import "JXCategoryDotZoomView.h"
 #import "JXCategoryIndicatorAlignmentLineView.h"
 #import "JXCategoryIndicatorBackgroundView.h"
 #import "JXCategoryIndicatorLineView.h"
+#import "JXCategoryNumberCell.h"
+#import "JXCategoryNumberCellModel.h"
+#import "JXCategoryNumberView.h"
 #import "JXCategorySubTitleCell.h"
 #import "JXCategorySubTitleCellModel.h"
 #import "JXCategorySubTitleView.h"
