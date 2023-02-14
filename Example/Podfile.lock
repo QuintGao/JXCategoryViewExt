@@ -1,26 +1,28 @@
 PODS:
-  - JXCategoryViewExt/Badge (1.1.6):
+  - JXCategoryViewExt/Badge (1.1.7):
     - JXCategoryViewExt/Title
-  - JXCategoryViewExt/Core (1.1.6)
-  - JXCategoryViewExt/Dot (1.1.6):
+  - JXCategoryViewExt/Core (1.1.7)
+  - JXCategoryViewExt/Dot (1.1.7):
     - JXCategoryViewExt/Title
-  - JXCategoryViewExt/DotZoom (1.1.6):
+  - JXCategoryViewExt/DotZoom (1.1.7):
     - JXCategoryViewExt/Title
-  - JXCategoryViewExt/Indicator/AlignmentLine (1.1.6):
+  - JXCategoryViewExt/Image (1.1.7):
+    - JXCategoryViewExt/Core
+  - JXCategoryViewExt/Indicator/AlignmentLine (1.1.7):
     - JXCategoryViewExt/Indicator/Line
-  - JXCategoryViewExt/Indicator/Background (1.1.6):
+  - JXCategoryViewExt/Indicator/Background (1.1.7):
     - JXCategoryViewExt/Core
-  - JXCategoryViewExt/Indicator/Line (1.1.6):
+  - JXCategoryViewExt/Indicator/Line (1.1.7):
     - JXCategoryViewExt/Core
-  - JXCategoryViewExt/Number (1.1.6):
+  - JXCategoryViewExt/Number (1.1.7):
     - JXCategoryViewExt/Title
-  - JXCategoryViewExt/SubTitle (1.1.6):
+  - JXCategoryViewExt/SubTitle (1.1.7):
     - JXCategoryViewExt/Title
-  - JXCategoryViewExt/SubTitleImage (1.1.6):
+  - JXCategoryViewExt/SubTitleImage (1.1.7):
     - JXCategoryViewExt/SubTitle
-  - JXCategoryViewExt/Title (1.1.6):
+  - JXCategoryViewExt/Title (1.1.7):
     - JXCategoryViewExt/Core
-  - JXCategoryViewExt/TitleImage (1.1.6):
+  - JXCategoryViewExt/TitleImage (1.1.7):
     - JXCategoryViewExt/Title
   - SDWebImage (5.11.1):
     - SDWebImage/Core (= 5.11.1)
@@ -30,6 +32,7 @@ DEPENDENCIES:
   - JXCategoryViewExt/Badge (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/Dot (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/DotZoom (from `../../JXCategoryViewExt`)
+  - JXCategoryViewExt/Image (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/Indicator/AlignmentLine (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/Indicator/Background (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/Number (from `../../JXCategoryViewExt`)
@@ -47,9 +50,9 @@ EXTERNAL SOURCES:
     :path: "../../JXCategoryViewExt"
 
 SPEC CHECKSUMS:
-  JXCategoryViewExt: 72d3aebd1944b47c6f872835323e3a16aa6b2d97
+  JXCategoryViewExt: b4a05d3fb001ea6cbc72e3092ab5bcaff62b7dde
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
 
-PODFILE CHECKSUM: 05ac5faeb52f19f65228c9d11d35bc093efb160d
+PODFILE CHECKSUM: 143fbf43a7db9b4046e256a92f084ae9c7cc28a4
 
 COCOAPODS: 1.11.3

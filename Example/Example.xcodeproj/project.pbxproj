@@ -17,6 +17,9 @@
 		60A838BD25B003D600F4B1BD /* JXCategoryViewExt.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 60A838BC25B003D600F4B1BD /* JXCategoryViewExt.podspec */; };
 		60A83B2925B169C700F4B1BD /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A83B2825B169C700F4B1BD /* ListViewController.m */; };
 		60A83B3825B1757B00F4B1BD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 60A83B3725B1757B00F4B1BD /* README.md */; };
+		795B9CEF2999D956003A9DF2 /* JXCategoryTitleBackgroundImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 795B9CEE2999D956003A9DF2 /* JXCategoryTitleBackgroundImageView.m */; };
+		795B9CF22999D972003A9DF2 /* JXCategoryTitleBackgroundImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 795B9CF12999D972003A9DF2 /* JXCategoryTitleBackgroundImageCell.m */; };
+		795B9CF52999D98B003A9DF2 /* JXCategoryTitleBackgroundImageCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 795B9CF42999D98B003A9DF2 /* JXCategoryTitleBackgroundImageCellModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +51,12 @@
 		60A83B2725B169C700F4B1BD /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		60A83B2825B169C700F4B1BD /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		60A83B3725B1757B00F4B1BD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		795B9CED2999D956003A9DF2 /* JXCategoryTitleBackgroundImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXCategoryTitleBackgroundImageView.h; sourceTree = "<group>"; };
+		795B9CEE2999D956003A9DF2 /* JXCategoryTitleBackgroundImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXCategoryTitleBackgroundImageView.m; sourceTree = "<group>"; };
+		795B9CF02999D972003A9DF2 /* JXCategoryTitleBackgroundImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXCategoryTitleBackgroundImageCell.h; sourceTree = "<group>"; };
+		795B9CF12999D972003A9DF2 /* JXCategoryTitleBackgroundImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXCategoryTitleBackgroundImageCell.m; sourceTree = "<group>"; };
+		795B9CF32999D98B003A9DF2 /* JXCategoryTitleBackgroundImageCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXCategoryTitleBackgroundImageCellModel.h; sourceTree = "<group>"; };
+		795B9CF42999D98B003A9DF2 /* JXCategoryTitleBackgroundImageCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXCategoryTitleBackgroundImageCellModel.m; sourceTree = "<group>"; };
 		9FE7E6A086DBA6ED803332CE /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		A64092DB9A0BFABC98A3EE23 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +102,7 @@
 		60A8381525B000D200F4B1BD /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				795B9CEC2999D927003A9DF2 /* TitleBackgroundImage */,
 				60A8381625B000D200F4B1BD /* AppDelegate.h */,
 				60A8381725B000D200F4B1BD /* AppDelegate.m */,
 				60A8381C25B000D200F4B1BD /* ViewController.h */,
@@ -108,6 +118,19 @@
 				609FE27B26CF4FEC00B5DAB5 /* live_home_play.gif */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		795B9CEC2999D927003A9DF2 /* TitleBackgroundImage */ = {
+			isa = PBXGroup;
+			children = (
+				795B9CED2999D956003A9DF2 /* JXCategoryTitleBackgroundImageView.h */,
+				795B9CEE2999D956003A9DF2 /* JXCategoryTitleBackgroundImageView.m */,
+				795B9CF02999D972003A9DF2 /* JXCategoryTitleBackgroundImageCell.h */,
+				795B9CF12999D972003A9DF2 /* JXCategoryTitleBackgroundImageCell.m */,
+				795B9CF32999D98B003A9DF2 /* JXCategoryTitleBackgroundImageCellModel.h */,
+				795B9CF42999D98B003A9DF2 /* JXCategoryTitleBackgroundImageCellModel.m */,
+			);
+			path = TitleBackgroundImage;
 			sourceTree = "<group>";
 		};
 		7B1D04BB43B2BE952E340A05 /* Pods */ = {
@@ -236,6 +259,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				60A8381E25B000D200F4B1BD /* ViewController.m in Sources */,
+				795B9CF52999D98B003A9DF2 /* JXCategoryTitleBackgroundImageCellModel.m in Sources */,
+				795B9CEF2999D956003A9DF2 /* JXCategoryTitleBackgroundImageView.m in Sources */,
+				795B9CF22999D972003A9DF2 /* JXCategoryTitleBackgroundImageCell.m in Sources */,
 				60A8381825B000D200F4B1BD /* AppDelegate.m in Sources */,
 				60A83B2925B169C700F4B1BD /* ListViewController.m in Sources */,
 				60A8382925B000D600F4B1BD /* main.m in Sources */,

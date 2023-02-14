@@ -9,6 +9,7 @@
 #import <JXCategoryViewExt/JXCategoryView.h>
 #import "ListViewController.h"
 #import <SDWebImage/SDWebImage.h>
+#import "JXCategoryTitleBackgroundImageView.h"
 
 #define HasAFNetworking (__has_include(<AFNetworking/AFNetworking.h>) || __has_include("AFNetworking.h"))
 // 颜色
@@ -24,6 +25,8 @@
 @property (nonatomic, strong) JXCategorySubTitleImageView *subTitleView;
 
 @property (nonatomic, strong) JXCategoryBadgeView *badgeView;
+
+@property (nonatomic, strong) JXCategoryTitleBackgroundImageView *titleBgView;
 
 @property (nonatomic, strong) JXCategoryListContainerView *containerView;
 
@@ -42,12 +45,14 @@
     self.dotView.frame = CGRectMake(0, 140, self.view.bounds.size.width, 40);
     self.subTitleView.frame = CGRectMake(0, 180, self.view.bounds.size.width, 54);
     self.badgeView.frame = CGRectMake(0, 234, self.view.bounds.size.width, 40);
-    self.containerView.frame = CGRectMake(0, 280, self.view.bounds.size.width, self.view.bounds.size.height - 280);
+    self.titleBgView.frame = CGRectMake(0, 280, self.view.bounds.size.width, 100);
+    self.containerView.frame = CGRectMake(0, 380, self.view.bounds.size.width, self.view.bounds.size.height - 380);
     
     [self.view addSubview:self.titleView];
     [self.view addSubview:self.dotView];
     [self.view addSubview:self.subTitleView];
     [self.view addSubview:self.badgeView];
+    [self.view addSubview:self.titleBgView];
     [self.view addSubview:self.containerView];
 }
 
@@ -117,10 +122,11 @@
         _titleView.delegate = self;
         _titleView.selectedAnimationEnabled = YES;
         
-//        JXCategoryIndicatorBackgroundView *indicator = [JXCategoryIndicatorBackgroundView new];
-//        indicator.indicatorCornerRadius = 4;
-//        indicator.indicatorWidthIncrement = 20;
-//        _titleView.indicators = @[indicator];
+        JXCategoryIndicatorBackgroundView *indicator = [JXCategoryIndicatorBackgroundView new];
+        indicator.indicatorCornerRadius = 0;
+        indicator.indicatorHeight = JXCategoryViewAutomaticDimension;
+//        indicator.indicatorColor = UIColor.redColor;
+        _titleView.indicators = @[indicator];
         
         _titleView.listContainer = self.containerView;
     }
@@ -144,11 +150,11 @@
         _subTitleView.subTitleWithTitlePositionMargin = 3;
         _subTitleView.cellSpacing = 0;
         _subTitleView.cellWidthIncrement = 16;
-//        _subTitleView.imageViewClass = [SDAnimatedImageView class];
+        _subTitleView.imageViewClass = [SDAnimatedImageView class];
         _subTitleView.imageSize = CGSizeMake(12, 12);
         _subTitleView.imageTypes = @[@(JXCategorySubTitleImageType_None), @(JXCategorySubTitleImageType_Left), @(JXCategorySubTitleImageType_None), @(JXCategorySubTitleImageType_Left), @(JXCategorySubTitleImageType_Left)];
-        _subTitleView.imageInfoArray = @[@"", @"zhongcao", @"", @"fangying", @"gif"];
-        _subTitleView.selectedImageInfoArray = @[@"", @"zhongcao", @"", @"fangying", @"gif"];
+        _subTitleView.imageInfoArray = @[@"", @"url", @"", @"fangying", @"gif"];
+        _subTitleView.selectedImageInfoArray = @[@"", @"url", @"", @"fangying", @"gif"];
         _subTitleView.subTitleInCenterX = NO;
         
         __weak __typeof(self) weakSelf = self;
@@ -156,7 +162,9 @@
             __strong __typeof(weakSelf) self = weakSelf;
             NSString *name = (NSString *)info;
             if (name.length > 0) {
-                if ([name isEqualToString:@"gif"]) {
+                if ([name isEqualToString:@"url"]) {
+                    [imageView sd_setImageWithURL:[NSURL URLWithString:@"https://upload-images.jianshu.io/upload_images/1598505-b6817cad3c9fa37c.gif?imageMogr2/auto-orient/strip"]];
+                }else if ([name isEqualToString:@"gif"]) {
 //                    [imageView sd_setImageWithURL:[NSURL URLWithString:@"https://upload-images.jianshu.io/upload_images/1598505-b6817cad3c9fa37c.gif?imageMogr2/auto-orient/strip"]];
                     NSMutableArray *images = [NSMutableArray new];
                     for (NSInteger i = 0; i < 4; i++) {
@@ -245,6 +253,35 @@
         _badgeView.listContainer = self.containerView;
     }
     return _badgeView;
+}
+
+- (JXCategoryTitleBackgroundImageView *)titleBgView {
+    if (!_titleBgView) {
+        _titleBgView = [[JXCategoryTitleBackgroundImageView alloc] init];
+        _titleBgView.titles = @[@"你的", @"我的", @"他的"];
+        _titleBgView.bgImageInfoArray = @[@"https://pics4.baidu.com/feed/a6efce1b9d16fdfad89ecde03e25dc5c95ee7b04.jpeg@f_auto?token=3bdf3fef14fafb45cab960c6fbb8f5d4",
+                                          @"https://pics4.baidu.com/feed/42166d224f4a20a40b0104d800f8c82a730ed0c0.jpeg@f_auto?token=5f575b3dca3fe7135c3bc2e94f4977b6",
+                                          @"https://pics7.baidu.com/feed/2934349b033b5bb5f82e59a9bf798531b700bc1a.jpeg@f_auto?token=0a741b5f3ec9c0304786308155b1eeab"];
+        _titleBgView.selectedBgImageInfoArray = _titleBgView.bgImageInfoArray;
+        
+        _titleBgView.titleFont = [UIFont fontWithName:@"PingFangSC-Regular" size:16];
+        _titleBgView.titleSelectedFont = [UIFont fontWithName:@"PingFangSC-Medium" size:16];
+        _titleBgView.titleLabelZoomEnabled = YES;
+        _titleBgView.titleLabelZoomScale = 1.25;
+        _titleBgView.titleLabelStrokeWidthEnabled = YES;
+        _titleBgView.titleLabelVerticalOffset = -10;
+        
+        _titleBgView.imageSize = CGSizeMake(80, 80);
+        _titleBgView.imageZoomEnabled = YES;
+        _titleBgView.imageZoomScale = 1.25;
+        _titleBgView.loadImageBlock = ^(UIImageView * _Nonnull imageView, id  _Nonnull info) {
+            [imageView sd_setImageWithURL:[NSURL URLWithString:info]];
+        };
+        
+        _titleBgView.listContainer = self.containerView;
+        
+    }
+    return _titleBgView;
 }
 
 - (JXCategoryListContainerView *)containerView {

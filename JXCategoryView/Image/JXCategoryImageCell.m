@@ -10,6 +10,7 @@
 #import "JXCategoryImageCellModel.h"
 
 @interface JXCategoryImageCell()
+@property (nonatomic, strong) id currentImageInfo;
 @property (nonatomic, strong) NSString *currentImageName;
 @property (nonatomic, strong) NSURL *currentImageURL;
 @end
@@ -19,6 +20,7 @@
 - (void)prepareForReuse {
     [super prepareForReuse];
 
+    self.currentImageInfo = nil;
     self.currentImageName = nil;
     self.currentImageURL = nil;
 }
@@ -26,9 +28,13 @@
 - (void)initializeViews {
     [super initializeViews];
 
-    _imageView = [[UIImageView alloc] init];
-    _imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [self.contentView addSubview:_imageView];
+    [self initialImageViewWithClass:UIImageView.class];
+}
+
+- (void)initialImageViewWithClass:(Class)cls {
+    _imageView = [[cls alloc] init];
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.contentView addSubview:self.imageView];
 }
 
 - (void)layoutSubviews {
@@ -47,28 +53,43 @@
     [super reloadData:cellModel];
 
     JXCategoryImageCellModel *myCellModel = (JXCategoryImageCellModel *)cellModel;
+    if (myCellModel.imageViewClass && myCellModel.imageViewClass != UIImageView.class) {
+        [self initialImageViewWithClass:myCellModel.imageViewClass];
+    }
+    
     //因为`- (void)reloadData:(JXCategoryBaseCellModel *)cellModel`方法会回调多次，尤其是左右滚动的时候会调用无数次，如果每次都触发图片加载，会非常消耗性能。所以只会在图片发生了变化的时候，才进行图片加载。
-    NSString *currentImageName;
-    NSURL *currentImageURL;
-    if (myCellModel.imageName) {
-        currentImageName = myCellModel.imageName;
-    } else if (myCellModel.imageURL) {
-        currentImageURL = myCellModel.imageURL;
-    }
-    if (myCellModel.isSelected) {
-        if (myCellModel.selectedImageName) {
-            currentImageName = myCellModel.selectedImageName;
-        } else if (myCellModel.selectedImageURL) {
-            currentImageURL = myCellModel.selectedImageURL;
+    if (myCellModel.loadImageBlock != nil) {
+        id currentImageInfo = myCellModel.imageInfo;
+        if (myCellModel.isSelected) {
+            currentImageInfo = myCellModel.selectedImageInfo;
         }
-    }
-    if (currentImageName && ![currentImageName isEqualToString:self.currentImageName]) {
-        self.currentImageName = currentImageName;
-        self.imageView.image = [UIImage imageNamed:currentImageName];
-    } else if (currentImageURL && ![currentImageURL.absoluteString isEqualToString:self.currentImageURL.absoluteString]) {
-        self.currentImageURL = currentImageURL;
-        if (myCellModel.loadImageCallback) {
-            myCellModel.loadImageCallback(self.imageView, currentImageURL);
+        if (currentImageInfo && ![currentImageInfo isEqual:self.currentImageInfo]) {
+            self.currentImageInfo = currentImageInfo;
+            !myCellModel.loadImageBlock ?: myCellModel.loadImageBlock(self.imageView, currentImageInfo);
+        }
+    }else {
+        NSString *currentImageName;
+        NSURL *currentImageURL;
+        if (myCellModel.imageName) {
+            currentImageName = myCellModel.imageName;
+        } else if (myCellModel.imageURL) {
+            currentImageURL = myCellModel.imageURL;
+        }
+        if (myCellModel.isSelected) {
+            if (myCellModel.selectedImageName) {
+                currentImageName = myCellModel.selectedImageName;
+            } else if (myCellModel.selectedImageURL) {
+                currentImageURL = myCellModel.selectedImageURL;
+            }
+        }
+        if (currentImageName && ![currentImageName isEqualToString:self.currentImageName]) {
+            self.currentImageName = currentImageName;
+            self.imageView.image = [UIImage imageNamed:currentImageName];
+        } else if (currentImageURL && ![currentImageURL.absoluteString isEqualToString:self.currentImageURL.absoluteString]) {
+            self.currentImageURL = currentImageURL;
+            if (myCellModel.loadImageCallback) {
+                myCellModel.loadImageCallback(self.imageView, currentImageURL);
+            }
         }
     }
 

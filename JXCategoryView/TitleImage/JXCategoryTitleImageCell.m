@@ -57,7 +57,7 @@
     [super reloadData:cellModel];
 
     JXCategoryTitleImageCellModel *myCellModel = (JXCategoryTitleImageCellModel *)cellModel;
-    if (myCellModel.imageViewClass) {
+    if (myCellModel.imageViewClass && myCellModel.imageViewClass != UIImageView.class) {
         [self initialImageViewWithClass:myCellModel.imageViewClass];
     }
     
@@ -113,12 +113,9 @@
         if (myCellModel.isSelected) {
             currentImageInfo = myCellModel.selectedImageInfo;
         }
-        if (currentImageInfo && [currentImageInfo isKindOfClass:[NSString class]] && ![currentImageInfo isEqualToString:self.currentImageInfo]) {
+        if (currentImageInfo && ![currentImageInfo isEqual:self.currentImageInfo]) {
             self.currentImageInfo = currentImageInfo;
-            myCellModel.loadImageBlock(self.imageView, currentImageInfo);
-        }else if (currentImageInfo && currentImageInfo != self.currentImageInfo) {
-            self.currentImageInfo = currentImageInfo;
-            myCellModel.loadImageBlock(self.imageView, currentImageInfo);
+            !myCellModel.loadImageBlock ?: myCellModel.loadImageBlock(self.imageView, currentImageInfo);
         }
     }else {
         NSString *currentImageName;
