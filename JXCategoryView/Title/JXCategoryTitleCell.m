@@ -93,6 +93,7 @@
         UIFont *maxScaleFont = [UIFont fontWithDescriptor:myCellModel.titleFont.fontDescriptor size:myCellModel.titleFont.pointSize*myCellModel.titleLabelSelectedZoomScale];
         
         CGFloat baseScale = myCellModel.titleFont.lineHeight/maxScaleFont.lineHeight;
+        NSLog(@"%f", baseScale);
         if (myCellModel.isSelectedAnimationEnabled && [self checkCanStartSelectedAnimation:myCellModel]) {
             JXCategoryCellSelectedAnimationBlock block = [self preferredTitleZoomAnimationBlock:myCellModel baseScale:baseScale];
             [self addSelectedAnimationBlock:block];

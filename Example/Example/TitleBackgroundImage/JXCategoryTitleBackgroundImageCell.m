@@ -60,12 +60,33 @@
     }
     
     if (myCellModel.isImageZoomEnabled) {
-        self.bgImageView.transform = CGAffineTransformMakeScale(myCellModel.imageZoomScale, myCellModel.imageZoomScale);
-    }else {
+        CGFloat baseScale = 1 / myCellModel.titleLabelSelectedZoomScale;
+        if (myCellModel.isSelectedAnimationEnabled && [self checkCanStartSelectedAnimation:myCellModel]) {
+            JXCategoryCellSelectedAnimationBlock block = [self preferredBgImageZoomAnimationBlock:myCellModel baseScale:baseScale];
+            [self addSelectedAnimationBlock:block];
+        } else {
+            CGAffineTransform currentTransform = CGAffineTransformMakeScale(baseScale*myCellModel.bgImageCurrentZoomScale, baseScale*myCellModel.bgImageCurrentZoomScale);
+            self.bgImageView.transform = currentTransform;
+            NSLog(@"----%f", myCellModel.bgImageCurrentZoomScale);
+        }
+    } else {
         self.bgImageView.transform = CGAffineTransformIdentity;
     }
-    
-    
+}
+
+- (JXCategoryCellSelectedAnimationBlock)preferredBgImageZoomAnimationBlock:(JXCategoryTitleBackgroundImageCellModel *)cellModel baseScale:(CGFloat)baseScale {
+    __weak typeof(self) weakSelf = self;
+    return ^(CGFloat percent) {
+        if (cellModel.isSelected) {
+            //将要选中，scale从小到大插值渐变
+            cellModel.bgImageCurrentZoomScale = [JXCategoryFactory interpolationFrom:cellModel.bgImageNormalZoomScale to:cellModel.bgImageSelectedZoomScale percent:percent];
+        } else {
+            //将要取消选中，scale从大到小插值渐变
+            cellModel.bgImageCurrentZoomScale = [JXCategoryFactory interpolationFrom:cellModel.bgImageSelectedZoomScale to:cellModel.bgImageNormalZoomScale percent:percent];
+        }
+        CGAffineTransform currentTransform = CGAffineTransformMakeScale(baseScale*cellModel.bgImageCurrentZoomScale, baseScale*cellModel.bgImageCurrentZoomScale);
+        weakSelf.bgImageView.transform = currentTransform;
+    };
 }
 
 @end

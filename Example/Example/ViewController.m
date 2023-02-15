@@ -270,12 +270,15 @@
         _titleBgView.titleLabelZoomScale = 1.25;
         _titleBgView.titleLabelStrokeWidthEnabled = YES;
         _titleBgView.titleLabelVerticalOffset = -10;
+        _titleBgView.selectedAnimationEnabled = YES;
         
         _titleBgView.imageSize = CGSizeMake(80, 80);
         _titleBgView.imageZoomEnabled = YES;
         _titleBgView.imageZoomScale = 1.25;
         _titleBgView.loadImageBlock = ^(UIImageView * _Nonnull imageView, id  _Nonnull info) {
-            [imageView sd_setImageWithURL:[NSURL URLWithString:info]];
+            [imageView sd_setImageWithURL:[NSURL URLWithString:info] placeholderImage:nil options:SDWebImageLowPriority context:@{SDWebImageContextImageTransformer: [SDImageBlurTransformer transformerWithRadius:10]} progress:nil completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+                NSLog(@"%@", image);
+            }];
         };
         
         _titleBgView.listContainer = self.containerView;

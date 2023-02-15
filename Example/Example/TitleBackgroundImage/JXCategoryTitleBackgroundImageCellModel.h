@@ -16,7 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) void(^loadImageBlock)(UIImageView *imageView, id info);
 @property (nonatomic, assign) CGSize imageSize; // 默认CGSizeMake(100, 100)
 @property (nonatomic, assign, getter=isImageZoomEnabled) BOOL imageZoomEnabled;
-@property (nonatomic, assign) CGFloat imageZoomScale;
+//@property (nonatomic, assign) CGFloat imageZoomScale;
+
+@property (nonatomic, assign) CGFloat bgImageNormalZoomScale;
+@property (nonatomic, assign) CGFloat bgImageCurrentZoomScale;
+@property (nonatomic, assign) CGFloat bgImageSelectedZoomScale;
 
 @end
 
