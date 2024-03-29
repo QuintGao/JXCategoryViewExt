@@ -7,7 +7,7 @@
 <a href=""><img src="https://img.shields.io/badge/support-ios%208%2B-orange.svg"></a>
 </p>
 
-该库是对[JXCategoryView](https://github.com/pujiaxin33/JXCategoryView/)的扩展及优化，目前的JXCategoryView版本1.6.1，JXCategoryViewExt版本1.2.0
+该库是对[JXCategoryView](https://github.com/pujiaxin33/JXCategoryView/)的扩展及优化，目前的JXCategoryView版本1.6.3，JXCategoryViewExt版本1.2.1
 
 ## 优化及bug修改
 
