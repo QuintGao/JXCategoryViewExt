@@ -72,6 +72,7 @@
 
 - (id<JXCategoryListContentViewDelegate>)listContainerView:(JXCategoryListContainerView *)listContainerView initListForIndex:(NSInteger)index {
     ListViewController *listVC = [ListViewController new];
+    listVC.index = index;
     return listVC;
 }
 
@@ -128,7 +129,8 @@
 //        indicator.indicatorColor = UIColor.redColor;
         _titleView.indicators = @[indicator];
         
-        _titleView.listContainer = self.containerView;
+//        _titleView.listContainer = self.containerView;
+        _titleView.contentScrollView = self.containerView.scrollView;
     }
     return _titleView;
 }
@@ -232,6 +234,12 @@
         _badgeView.badgeTypes = @[@(JXCategoryBadgeType_Number), @(JXCategoryBadgeType_Text), @(JXCategoryBadgeType_Dot), @(JXCategoryBadgeType_Text)];
         _badgeView.badges = @[@"100", @"直播", @"1", @"0"];
         _badgeView.shouldMakeRoundWhenSingleNumber = YES;
+        
+//        _badgeView.titleLabelSelectedVerticalOffset = 1;
+        _badgeView.titleLabelZoomEnabled = YES;
+        _badgeView.titleLabelZoomScale = 1.2;
+        _badgeView.titleLabelAnchorPointStyle = JXCategoryTitleLabelAnchorPointStyleBottom;
+        _badgeView.dotBadgeOffset = CGPointMake(10, -10);
         
         _badgeView.badgeStringFormatterBlock = ^NSString * _Nonnull(JXCategoryBadgeType badgeType, id  _Nonnull badge) {
             if (badgeType == JXCategoryBadgeType_Number) {

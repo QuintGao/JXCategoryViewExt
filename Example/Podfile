@@ -15,6 +15,6 @@ target 'Example' do
   pod 'JXCategoryViewExt/Number', :path => '../../JXCategoryViewExt'
   pod 'JXCategoryViewExt/Dot', :path => '../../JXCategoryViewExt'
   pod 'JXCategoryViewExt/Image', :path => '../../JXCategoryViewExt'
-#  pod 'JXCategoryViewExt/RTL', :path => '../../JXCategoryViewExt'
+  pod 'JXCategoryViewExt/RTL', :path => '../../JXCategoryViewExt'
 
 end

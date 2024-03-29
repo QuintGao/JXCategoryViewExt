@@ -67,7 +67,6 @@
         } else {
             CGAffineTransform currentTransform = CGAffineTransformMakeScale(baseScale*myCellModel.bgImageCurrentZoomScale, baseScale*myCellModel.bgImageCurrentZoomScale);
             self.bgImageView.transform = currentTransform;
-            NSLog(@"----%f", myCellModel.bgImageCurrentZoomScale);
         }
     } else {
         self.bgImageView.transform = CGAffineTransformIdentity;

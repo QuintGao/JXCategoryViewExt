@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
   # ――― 基础组件 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.subspec 'Core' do |ss|
     ss.source_files = 'JXCategoryView/Core/**/*.{h,m}'
+    ss.resource_bundles = {"JXCategoryViewExt" => ["JXCategoryView/Core/PrivacyInfo.xcprivacy"]}
   end
   
   # ――― 分类 ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

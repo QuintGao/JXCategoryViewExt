@@ -1,28 +1,30 @@
 PODS:
-  - JXCategoryViewExt/Badge (1.1.7):
+  - JXCategoryViewExt/Badge (1.2.0):
     - JXCategoryViewExt/Title
-  - JXCategoryViewExt/Core (1.1.7)
-  - JXCategoryViewExt/Dot (1.1.7):
+  - JXCategoryViewExt/Core (1.2.0)
+  - JXCategoryViewExt/Dot (1.2.0):
     - JXCategoryViewExt/Title
-  - JXCategoryViewExt/DotZoom (1.1.7):
+  - JXCategoryViewExt/DotZoom (1.2.0):
     - JXCategoryViewExt/Title
-  - JXCategoryViewExt/Image (1.1.7):
+  - JXCategoryViewExt/Image (1.2.0):
     - JXCategoryViewExt/Core
-  - JXCategoryViewExt/Indicator/AlignmentLine (1.1.7):
+  - JXCategoryViewExt/Indicator/AlignmentLine (1.2.0):
     - JXCategoryViewExt/Indicator/Line
-  - JXCategoryViewExt/Indicator/Background (1.1.7):
+  - JXCategoryViewExt/Indicator/Background (1.2.0):
     - JXCategoryViewExt/Core
-  - JXCategoryViewExt/Indicator/Line (1.1.7):
+  - JXCategoryViewExt/Indicator/Line (1.2.0):
     - JXCategoryViewExt/Core
-  - JXCategoryViewExt/Number (1.1.7):
+  - JXCategoryViewExt/Number (1.2.0):
     - JXCategoryViewExt/Title
-  - JXCategoryViewExt/SubTitle (1.1.7):
+  - JXCategoryViewExt/RTL (1.2.0):
+    - JXCategoryViewExt/Core
+  - JXCategoryViewExt/SubTitle (1.2.0):
     - JXCategoryViewExt/Title
-  - JXCategoryViewExt/SubTitleImage (1.1.7):
+  - JXCategoryViewExt/SubTitleImage (1.2.0):
     - JXCategoryViewExt/SubTitle
-  - JXCategoryViewExt/Title (1.1.7):
+  - JXCategoryViewExt/Title (1.2.0):
     - JXCategoryViewExt/Core
-  - JXCategoryViewExt/TitleImage (1.1.7):
+  - JXCategoryViewExt/TitleImage (1.2.0):
     - JXCategoryViewExt/Title
   - SDWebImage (5.11.1):
     - SDWebImage/Core (= 5.11.1)
@@ -36,6 +38,7 @@ DEPENDENCIES:
   - JXCategoryViewExt/Indicator/AlignmentLine (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/Indicator/Background (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/Number (from `../../JXCategoryViewExt`)
+  - JXCategoryViewExt/RTL (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/SubTitle (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/SubTitleImage (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/TitleImage (from `../../JXCategoryViewExt`)
@@ -50,9 +53,9 @@ EXTERNAL SOURCES:
     :path: "../../JXCategoryViewExt"
 
 SPEC CHECKSUMS:
-  JXCategoryViewExt: b4a05d3fb001ea6cbc72e3092ab5bcaff62b7dde
+  JXCategoryViewExt: f1985c94ff0466a94672485ae85cd6bb7bcc1ad4
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
 
-PODFILE CHECKSUM: 143fbf43a7db9b4046e256a92f084ae9c7cc28a4
+PODFILE CHECKSUM: ff7adbb3b320602e22459eb6b2ce2b6d57b6b87b
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.15.2

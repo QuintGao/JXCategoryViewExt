@@ -44,6 +44,8 @@
 #import "JXCategoryNumberCell.h"
 #import "JXCategoryNumberCellModel.h"
 #import "JXCategoryNumberView.h"
+#import "JXCategoryListContainerRTLCell.h"
+#import "RTLManager.h"
 #import "JXCategorySubTitleCell.h"
 #import "JXCategorySubTitleCellModel.h"
 #import "JXCategorySubTitleView.h"
