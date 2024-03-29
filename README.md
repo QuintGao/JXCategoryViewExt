@@ -105,6 +105,7 @@ pod 'JXCategoryViewExt/RTL'
 ```
 
 ## 更新记录
+* 1.2.1 2024.03.29 JXCategoryView更新到1.6.3，增加苹果隐私清单文件
 * 1.2.0 2023.02.14 JXCategoryView更新到1.6.1，代码优化
 * 1.1.7 2022.04.19 新增JXCategoryBadgeView，支持文字、数字、红点混合显示
 * 1.1.6 2021.12.03 删除多余属性
