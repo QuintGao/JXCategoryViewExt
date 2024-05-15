@@ -11,7 +11,7 @@
 
 - (void)dealloc {
     self.badgeStringFormatterBlock = nil;
-    self.badgeStyleBlock = nil;
+    self.updateBlock = nil;
 }
 
 - (void)initializeData {
@@ -20,10 +20,11 @@
     self.cellSpacing = 25;
     _badgeTitleColor = UIColor.whiteColor;
     _badgeBackgroundColor = UIColor.redColor;
-    _badgeLabelHeight = 14;
-    _badgeLabelWithIncrement = 10;
+    _badgeHeight = 14;
+    _badgeWithIncrement = 10;
     _badgeLabelFont = [UIFont systemFontOfSize:11];
-    _badgeLabelOffset = CGPointZero;
+    _badgeSize = CGSizeZero;
+    _badgeOffset = CGPointZero;
     _shouldMakeRoundWhenSingleNumber = NO;
     _dotBadgeSize = CGSizeMake(10, 10);
     _dotBadgeCornerRadius = JXCategoryViewAutomaticDimension;
@@ -48,19 +49,20 @@
     
     JXCategoryBadgeCellModel *myCellModel = (JXCategoryBadgeCellModel *)cellModel;
     myCellModel.badgeType = [self.badgeTypes[index] integerValue];
-    myCellModel.badge = self.badges[index];
+    myCellModel.badgeInfo = self.badgeInfos[index];
     if (self.badgeStringFormatterBlock) {
-        myCellModel.badgeString = self.badgeStringFormatterBlock(myCellModel.badgeType, myCellModel.badge);
+        myCellModel.badgeString = self.badgeStringFormatterBlock(myCellModel.badgeType, myCellModel.badgeInfo);
     }else {
-        myCellModel.badgeString = [NSString stringWithFormat:@"%@", myCellModel.badge];
+        myCellModel.badgeString = [NSString stringWithFormat:@"%@", myCellModel.badgeInfo];
     }
-    myCellModel.badgeStyleBlock = self.badgeStyleBlock;
+    myCellModel.updateBlock = self.updateBlock;
     myCellModel.badgeBackgroundColor = self.badgeBackgroundColor;
     myCellModel.badgeTitleColor = self.badgeTitleColor;
     myCellModel.badgeLabelFont = self.badgeLabelFont;
-    myCellModel.badgeLabelHeight = self.badgeLabelHeight;
-    myCellModel.badgeLabelOffset = self.badgeLabelOffset;
-    myCellModel.badgeLabelWidthIncrement = self.badgeLabelWithIncrement;
+    myCellModel.badgeHeight = self.badgeHeight;
+    myCellModel.badgeSize = self.badgeSize;
+    myCellModel.badgeOffset = self.badgeOffset;
+    myCellModel.badgeWidthIncrement = self.badgeWithIncrement;
     myCellModel.shouldMakeRoundWhenSingleNumber = self.shouldMakeRoundWhenSingleNumber;
     myCellModel.dotBadgeSize = self.dotBadgeSize;
     myCellModel.dotBadgeOffset = self.dotBadgeOffset;

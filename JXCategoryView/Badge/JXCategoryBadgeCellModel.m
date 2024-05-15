@@ -14,8 +14,8 @@
     [self updateBadgeSizeWidthIfNeeded];
 }
 
-- (void)setBadgeLabelHeight:(CGFloat)badgeLabelHeight {
-    _badgeLabelHeight = badgeLabelHeight;
+- (void)setBadgeHeight:(CGFloat)badgeHeight {
+    _badgeHeight = badgeHeight;
     [self updateBadgeSizeWidthIfNeeded];
 }
 
@@ -26,7 +26,7 @@
 
 - (void)updateBadgeSizeWidthIfNeeded {
     if (self.badgeLabelFont != nil) {
-        _badgeStringWidth = [self.badgeString boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, self.badgeLabelHeight) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.badgeLabelFont} context:nil].size.width;
+        _badgeStringWidth = [self.badgeString boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, self.badgeHeight) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.badgeLabelFont} context:nil].size.width;
     }
 }
 

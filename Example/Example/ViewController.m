@@ -230,16 +230,18 @@
 - (JXCategoryBadgeView *)badgeView {
     if (!_badgeView) {
         _badgeView = [[JXCategoryBadgeView alloc] init];
-        _badgeView.titles = @[@"你好", @"我好", @"他好", @"大家好"];
-        _badgeView.badgeTypes = @[@(JXCategoryBadgeType_Number), @(JXCategoryBadgeType_Text), @(JXCategoryBadgeType_Dot), @(JXCategoryBadgeType_Text)];
-        _badgeView.badges = @[@"100", @"直播", @"1", @"0"];
+        _badgeView.titles = @[@"图片", @"数字", @"文字", @"圆点", @"文字0"];
+        _badgeView.badgeTypes = @[@(JXCategoryBadgeType_Image), @(JXCategoryBadgeType_Number), @(JXCategoryBadgeType_Text), @(JXCategoryBadgeType_Dot), @(JXCategoryBadgeType_Text)];
+        _badgeView.badgeInfos = @[@"https://editor-img.888ban.com/ips_templ_preview/80/68/44/lg_69654_1617800030_606dab5eeb73f.jpg!w280_png?auth_key=2278944000-0-0-7b73c2caa86d6646fd1d541749c554c1", @"100", @"直播", @"1", @"0"];
         _badgeView.shouldMakeRoundWhenSingleNumber = YES;
         
 //        _badgeView.titleLabelSelectedVerticalOffset = 1;
         _badgeView.titleLabelZoomEnabled = YES;
         _badgeView.titleLabelZoomScale = 1.2;
-        _badgeView.titleLabelAnchorPointStyle = JXCategoryTitleLabelAnchorPointStyleBottom;
-        _badgeView.dotBadgeOffset = CGPointMake(10, -10);
+//        _badgeView.titleLabelAnchorPointStyle = JXCategoryTitleLabelAnchorPointStyleBottom;
+        _badgeView.dotBadgeOffset = CGPointMake(10, 0);
+        _badgeView.badgeOffset = CGPointMake(5, 0);
+        _badgeView.badgeSize = CGSizeMake(20, 20);
         
         _badgeView.badgeStringFormatterBlock = ^NSString * _Nonnull(JXCategoryBadgeType badgeType, id  _Nonnull badge) {
             if (badgeType == JXCategoryBadgeType_Number) {
@@ -249,12 +251,14 @@
             return badge;
         };
         
-        _badgeView.badgeStyleBlock = ^(NSInteger index, UILabel * _Nonnull badgeLabel) {
-            if (index == 1) {
-                badgeLabel.backgroundColor = UIColor.blackColor;
-                badgeLabel.textColor = UIColor.brownColor;
+        _badgeView.updateBlock = ^(NSInteger index, JXCategoryBadgeItemView * _Nonnull itemView, id  _Nonnull badgeInfo) {
+            if (index == 0) {
+                [itemView.badgeImageView sd_setImageWithURL:[NSURL URLWithString:badgeInfo]];
+            }else if (index == 1) {
+                itemView.badgeLabel.backgroundColor = UIColor.blackColor;
+                itemView.badgeLabel.textColor = UIColor.brownColor;
             }else if (index == 2) {
-                badgeLabel.backgroundColor = UIColor.blueColor;
+                itemView.badgeLabel.backgroundColor = UIColor.blueColor;
             }
         };
         
