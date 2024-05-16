@@ -1,6 +1,6 @@
 {
   "name": "JXCategoryViewExt",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "summary": "JXCategoryView extensions and optimize",
   "homepage": "https://github.com/QuintGao/JXCategoryViewExt",
   "license": "MIT",
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/QuintGao/JXCategoryViewExt.git",
-    "tag": "1.2.0"
+    "tag": "1.2.2"
   },
   "requires_arc": true,
   "default_subspecs": "Core",

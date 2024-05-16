@@ -44,8 +44,6 @@
 #import "JXCategoryNumberCell.h"
 #import "JXCategoryNumberCellModel.h"
 #import "JXCategoryNumberView.h"
-#import "JXCategoryListContainerRTLCell.h"
-#import "RTLManager.h"
 #import "JXCategorySubTitleCell.h"
 #import "JXCategorySubTitleCellModel.h"
 #import "JXCategorySubTitleView.h"
@@ -58,6 +56,9 @@
 #import "JXCategoryTitleImageCell.h"
 #import "JXCategoryTitleImageCellModel.h"
 #import "JXCategoryTitleImageView.h"
+#import "JXCategoryTitleVerticalZoomCell.h"
+#import "JXCategoryTitleVerticalZoomCellModel.h"
+#import "JXCategoryTitleVerticalZoomView.h"
 
 FOUNDATION_EXPORT double JXCategoryViewExtVersionNumber;
 FOUNDATION_EXPORT const unsigned char JXCategoryViewExtVersionString[];

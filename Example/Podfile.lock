@@ -1,30 +1,30 @@
 PODS:
-  - JXCategoryViewExt/Badge (1.2.0):
+  - JXCategoryViewExt/Badge (1.2.2):
     - JXCategoryViewExt/Title
-  - JXCategoryViewExt/Core (1.2.0)
-  - JXCategoryViewExt/Dot (1.2.0):
+  - JXCategoryViewExt/Core (1.2.2)
+  - JXCategoryViewExt/Dot (1.2.2):
     - JXCategoryViewExt/Title
-  - JXCategoryViewExt/DotZoom (1.2.0):
+  - JXCategoryViewExt/DotZoom (1.2.2):
     - JXCategoryViewExt/Title
-  - JXCategoryViewExt/Image (1.2.0):
+  - JXCategoryViewExt/Image (1.2.2):
     - JXCategoryViewExt/Core
-  - JXCategoryViewExt/Indicator/AlignmentLine (1.2.0):
+  - JXCategoryViewExt/Indicator/AlignmentLine (1.2.2):
     - JXCategoryViewExt/Indicator/Line
-  - JXCategoryViewExt/Indicator/Background (1.2.0):
+  - JXCategoryViewExt/Indicator/Background (1.2.2):
     - JXCategoryViewExt/Core
-  - JXCategoryViewExt/Indicator/Line (1.2.0):
+  - JXCategoryViewExt/Indicator/Line (1.2.2):
     - JXCategoryViewExt/Core
-  - JXCategoryViewExt/Number (1.2.0):
+  - JXCategoryViewExt/Number (1.2.2):
     - JXCategoryViewExt/Title
-  - JXCategoryViewExt/RTL (1.2.0):
-    - JXCategoryViewExt/Core
-  - JXCategoryViewExt/SubTitle (1.2.0):
+  - JXCategoryViewExt/SubTitle (1.2.2):
     - JXCategoryViewExt/Title
-  - JXCategoryViewExt/SubTitleImage (1.2.0):
+  - JXCategoryViewExt/SubTitleImage (1.2.2):
     - JXCategoryViewExt/SubTitle
-  - JXCategoryViewExt/Title (1.2.0):
+  - JXCategoryViewExt/Title (1.2.2):
     - JXCategoryViewExt/Core
-  - JXCategoryViewExt/TitleImage (1.2.0):
+  - JXCategoryViewExt/TitleImage (1.2.2):
+    - JXCategoryViewExt/Title
+  - JXCategoryViewExt/VerticalZoomTitle (1.2.2):
     - JXCategoryViewExt/Title
   - SDWebImage (5.11.1):
     - SDWebImage/Core (= 5.11.1)
@@ -38,10 +38,10 @@ DEPENDENCIES:
   - JXCategoryViewExt/Indicator/AlignmentLine (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/Indicator/Background (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/Number (from `../../JXCategoryViewExt`)
-  - JXCategoryViewExt/RTL (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/SubTitle (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/SubTitleImage (from `../../JXCategoryViewExt`)
   - JXCategoryViewExt/TitleImage (from `../../JXCategoryViewExt`)
+  - JXCategoryViewExt/VerticalZoomTitle (from `../../JXCategoryViewExt`)
   - SDWebImage
 
 SPEC REPOS:
@@ -53,9 +53,9 @@ EXTERNAL SOURCES:
     :path: "../../JXCategoryViewExt"
 
 SPEC CHECKSUMS:
-  JXCategoryViewExt: f1985c94ff0466a94672485ae85cd6bb7bcc1ad4
+  JXCategoryViewExt: 5e8c00bd3f031d6ed403a95050cd1af30b847f77
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
 
-PODFILE CHECKSUM: ff7adbb3b320602e22459eb6b2ce2b6d57b6b87b
+PODFILE CHECKSUM: c7d032451f2c107d33218ed2644c3d20c666a069
 
 COCOAPODS: 1.15.2
